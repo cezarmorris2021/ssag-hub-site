@@ -73,28 +73,28 @@
 0173|Department Workstation Binders — 12 Individual Assets|People, Training and Workforce — Department Workstation Binder
 0174|Department Workstation Binders — 12 Individual Assets|Knowledge, Documentation and IP — Department Workstation Binder
 0175|Department Workstation Binders — 12 Individual Assets|Partnerships, Licensing and Marketplace — Department Workstation Binder
-0176|Department Workstation Binders — 12 Individual Assets|EXE-001 — Daily Command Review
-0177|Department Workstation Binders — 12 Individual Assets|EXE-002 — Executive Decision Record
-0178|Department Workstation Binders — 12 Individual Assets|EXE-003 — Major Commitment Approval
-0179|Department Workstation Binders — 12 Individual Assets|EXE-004 — New Division / Offer Gate
-0180|Department Workstation Binders — 12 Individual Assets|EXE-005 — Delegation of Authority
-0181|Department Workstation Binders — 12 Individual Assets|EXE-006 — Risk Acceptance
-0182|Department Workstation Binders — 12 Individual Assets|EXE-007 — Weekly Executive Review
-0183|Department Workstation Binders — 12 Individual Assets|EXE-008 — Emergency Executive Succession
-0184|Department Workstation Binders — 12 Individual Assets|OPS-001 — Work Intake
-0185|Department Workstation Binders — 12 Individual Assets|OPS-002 — Priority Setting
-0186|Department Workstation Binders — 12 Individual Assets|OPS-003 — Capacity Planning
-0187|Department Workstation Binders — 12 Individual Assets|OPS-004 — Project Kickoff
-0188|Department Workstation Binders — 12 Individual Assets|OPS-005 — Blocker Escalation
-0189|Department Workstation Binders — 12 Individual Assets|OPS-006 — Cross-Department Handoff
-0190|Department Workstation Binders — 12 Individual Assets|OPS-007 — Change Control
-0191|Department Workstation Binders — 12 Individual Assets|OPS-008 — Weekly Operations Review
-0192|Department Workstation Binders — 12 Individual Assets|SAL-001 — Daily Queue Preparation
-0193|Department Workstation Binders — 12 Individual Assets|SAL-002 — Human Outbound Call
-0194|Department Workstation Binders — 12 Individual Assets|SAL-003 — Call Logging
-0195|Department Workstation Binders — 12 Individual Assets|SAL-004 — Follow-Up Sequence
-0196|Department Workstation Binders — 12 Individual Assets|SAL-005 — Discovery Booking and Handoff
-0197|Department Workstation Binders — 12 Individual Assets|SAL-006 — Discovery and Fit Decision
-0198|Department Workstation Binders — 12 Individual Assets|SAL-007 — Proposal Preparation and QA
-0199|Department Workstation Binders — 12 Individual Assets|SAL-008 — Payment Gate and Sales Handoff
-0200|Department Workstation Binders — 12 Individual Assets|MKT-001 — Lead Research
+0176|Department SOPs — 96 Individual Assets|EXE-001 — Daily Command Review
+0177|Department SOPs — 96 Individual Assets|EXE-002 — Executive Decision Record
+0178|Department SOPs — 96 Individual Assets|EXE-003 — Major Commitment Approval
+0179|Department SOPs — 96 Individual Assets|EXE-004 — New Division / Offer Gate
+0180|Department SOPs — 96 Individual Assets|EXE-005 — Delegation of Authority
+0181|Department SOPs — 96 Individual Assets|EXE-006 — Risk Acceptance
+0182|Department SOPs — 96 Individual Assets|EXE-007 — Weekly Executive Review
+0183|Department SOPs — 96 Individual Assets|EXE-008 — Emergency Executive Succession
+0184|Department SOPs — 96 Individual Assets|OPS-001 — Work Intake
+0185|Department SOPs — 96 Individual Assets|OPS-002 — Priority Setting
+0186|Department SOPs — 96 Individual Assets|OPS-003 — Capacity Planning
+0187|Department SOPs — 96 Individual Assets|OPS-004 — Project Kickoff
+0188|Department SOPs — 96 Individual Assets|OPS-005 — Blocker Escalation
+0189|Department SOPs — 96 Individual Assets|OPS-006 — Cross-Department Handoff
+0190|Department SOPs — 96 Individual Assets|OPS-007 — Change Control
+0191|Department SOPs — 96 Individual Assets|OPS-008 — Weekly Operations Review
+0192|Department SOPs — 96 Individual Assets|SAL-001 — Daily Queue Preparation
+0193|Department SOPs — 96 Individual Assets|SAL-002 — Human Outbound Call
+0194|Department SOPs — 96 Individual Assets|SAL-003 — Call Logging
+0195|Department SOPs — 96 Individual Assets|SAL-004 — Follow-Up Sequence
+0196|Department SOPs — 96 Individual Assets|SAL-005 — Discovery Booking and Handoff
+0197|Department SOPs — 96 Individual Assets|SAL-006 — Discovery and Fit Decision
+0198|Department SOPs — 96 Individual Assets|SAL-007 — Proposal Preparation and QA
+0199|Department SOPs — 96 Individual Assets|SAL-008 — Payment Gate and Sales Handoff
+0200|Department SOPs — 96 Individual Assets|MKT-001 — Lead Research
