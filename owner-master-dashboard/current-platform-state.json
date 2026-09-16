@@ -1,0 +1,58 @@
+{
+  "auditedAt": "2026-09-16T21:48:00Z",
+  "historicalBaselineAssets": 389,
+  "note": "Current-state operating inventory. Kept separate from the frozen 389-item historical recovery baseline.",
+  "vercel": {
+    "projectCount": 16,
+    "gitLinkedCountObserved": 2,
+    "projects": [
+      {"name":"revenue-ready-makeup-suite","sourceLinkObserved":false},
+      {"name":"cezar-master-build-launchpad","sourceLinkObserved":false},
+      {"name":"savings-command-center","sourceLinkObserved":false},
+      {"name":"retail-arbitrage-command-center","sourceLinkObserved":false},
+      {"name":"sentinel_zero_call_command_vercel_2026-08-21","sourceLinkObserved":false},
+      {"name":"sentinel_zero_call_command_vercel_fixed_3.2.2_2026-08-21","sourceLinkObserved":false},
+      {"name":"ssag-owner-launchpad","sourceLinkObserved":false},
+      {"name":"sentinel_zero_enterprise_2026-08-21","sourceLinkObserved":false},
+      {"name":"ssag-platform-public","sourceLinkObserved":false},
+      {"name":"ssag-command-center-elite","sourceLinkObserved":true,"repo":"cezarmorris2021/ssag-command-center-elite"},
+      {"name":"ssag-command-center","sourceLinkObserved":true,"repo":"cezarmorris2021/ssag-command-center"},
+      {"name":"sentinel-zero-sales-coach","sourceLinkObserved":false},
+      {"name":"sentinel-zero-proposal-builder","sourceLinkObserved":false},
+      {"name":"sentinel-zero-review-intake","sourceLinkObserved":false},
+      {"name":"sentinel-zero-cyber-exposure-score","sourceLinkObserved":false},
+      {"name":"sentinel_zero_call_command_vercel_fixed_3.2.1_2026-08-21","sourceLinkObserved":false}
+    ]
+  },
+  "render": {
+    "webServiceCount": 5,
+    "platformHealthCheckPathsConfigured": 0,
+    "services": [
+      {"name":"sentinel-zero-ai-outbound","url":"https://sentinel-zero-ai-outbound.onrender.com","repo":"datatranferservice-hue/employee-call-dispatch","codeHealthEndpoint":"/health"},
+      {"name":"cezar-two-player-chess","url":"https://cezar-two-player-chess.onrender.com","repo":"datatranferservice-hue/employee-call-dispatch","codeHealthEndpoint":"/health"},
+      {"name":"callflow-command","url":"https://callflow-command.onrender.com","repo":"datatranferservice-hue/employee-call-dispatch","codeHealthEndpoint":"/api/health"},
+      {"name":"ssag-command-center-backend","url":"https://ssag-command-center-backend.onrender.com","repo":"cezarmorris2021/ssag-command-center","codeHealthEndpoint":"/api/health","storage":"memory-only","persistence":false},
+      {"name":"ssag-backend","url":"https://ssag-backend.onrender.com","repo":"cezarmorris2021/ssag-command-center","codeHealthEndpoint":"/api/health","storage":"memory-only","persistence":false}
+    ],
+    "postgres": [
+      {"name":"ssag-command-center-staging-db","id":"dpg-da43a76417fc73buidg0-a","status":"available","plan":"free","expiresAt":"2026-09-20T11:23:08.026304Z","dataContentsVerified":false,"warning":"Contents could not be inspected through the current connector because SSL/TLS was required. Do not assume this database is empty or disposable."}
+    ]
+  },
+  "payments": {
+    "connectedStripeContextObserved":"Sentinel Zero sandbox",
+    "mode":"test",
+    "liveCheckoutVerified":false
+  },
+  "priorityControls": [
+    "Move owner-only intelligence behind authenticated access",
+    "Map every production deployment to a canonical source repository and branch",
+    "Configure hosting health checks and consume system-status.json in the owner dashboard",
+    "Replace memory-only SSAG backend storage with a durable canonical CRM/database",
+    "Resolve or preserve the staging Postgres database before its recorded expiration if it contains needed data",
+    "Connect authorized live payment processing before calling checkout live",
+    "Use one lead/customer identity from acquisition through payment and support",
+    "Separate ACTIVE, RETIRED and HISTORICAL versions",
+    "Display collected revenue actuals separately from projections",
+    "Move owner/IP/succession data behind owner-only role-based access"
+  ]
+}
