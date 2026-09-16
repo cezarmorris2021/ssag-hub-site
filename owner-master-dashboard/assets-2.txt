@@ -1,0 +1,100 @@
+0101|Top-Level Controlled Enterprise Assets (00–44)|40 Caller Certification and Queue Release Book
+0102|Top-Level Controlled Enterprise Assets (00–44)|41 Revenue Numbers, Funnel and Financial Controls
+0103|Top-Level Controlled Enterprise Assets (00–44)|42 Live Activation Command Center.xlsx
+0104|Top-Level Controlled Enterprise Assets (00–44)|43 30-Day Execution and Owner Action Book
+0105|Top-Level Controlled Enterprise Assets (00–44)|44 Live Loop QA, Cross-Check and Proof Book
+0106|Position Manuals — 29 Individual Assets|Founder and Chief Executive Officer — Position Manual
+0107|Position Manuals — 29 Individual Assets|Chief of Staff / Executive Operations Lead — Position Manual
+0108|Position Manuals — 29 Individual Assets|Operations Director / PMO Lead — Position Manual
+0109|Position Manuals — 29 Individual Assets|Executive Assistant / Office Coordinator — Position Manual
+0110|Position Manuals — 29 Individual Assets|Sales Director — Position Manual
+0111|Position Manuals — 29 Individual Assets|Sales Development Representative / Caller — Position Manual
+0112|Position Manuals — 29 Individual Assets|Account Executive / Closer — Position Manual
+0113|Position Manuals — 29 Individual Assets|Sales Operations / CRM Coordinator — Position Manual
+0114|Position Manuals — 29 Individual Assets|Lead Research Specialist — Position Manual
+0115|Position Manuals — 29 Individual Assets|Marketing and Content Coordinator — Position Manual
+0116|Position Manuals — 29 Individual Assets|Client Intake and Onboarding Coordinator — Position Manual
+0117|Position Manuals — 29 Individual Assets|Client Success Manager — Position Manual
+0118|Position Manuals — 29 Individual Assets|Project and Delivery Manager — Position Manual
+0119|Position Manuals — 29 Individual Assets|Cyber Risk Assessment Analyst — Position Manual
+0120|Position Manuals — 29 Individual Assets|Healthcare Workflow Analyst — Position Manual
+0121|Position Manuals — 29 Individual Assets|Security and Operations Advisor — Position Manual
+0122|Position Manuals — 29 Individual Assets|Quality Assurance Reviewer — Position Manual
+0123|Position Manuals — 29 Individual Assets|Compliance and Risk Coordinator — Position Manual
+0124|Position Manuals — 29 Individual Assets|Finance and Billing Coordinator — Position Manual
+0125|Position Manuals — 29 Individual Assets|Bookkeeping / Payroll Liaison — Position Manual
+0126|Position Manuals — 29 Individual Assets|Procurement and Vendor Coordinator — Position Manual
+0127|Position Manuals — 29 Individual Assets|Technology and Automation Administrator — Position Manual
+0128|Position Manuals — 29 Individual Assets|CRM and Data Administrator — Position Manual
+0129|Position Manuals — 29 Individual Assets|Helpdesk and Support Coordinator — Position Manual
+0130|Position Manuals — 29 Individual Assets|People Operations Coordinator — Position Manual
+0131|Position Manuals — 29 Individual Assets|Training and Performance Coordinator — Position Manual
+0132|Position Manuals — 29 Individual Assets|Documentation and SOP Librarian — Position Manual
+0133|Position Manuals — 29 Individual Assets|Partnerships and Licensing Manager — Position Manual
+0134|Position Manuals — 29 Individual Assets|Marketplace and Operator Program Coordinator — Position Manual
+0135|Role Starter & Certification Kits — 29 Individual Assets|Founder and Chief Executive Officer — Starter & Certification Kit
+0136|Role Starter & Certification Kits — 29 Individual Assets|Chief of Staff / Executive Operations Lead — Starter & Certification Kit
+0137|Role Starter & Certification Kits — 29 Individual Assets|Operations Director / PMO Lead — Starter & Certification Kit
+0138|Role Starter & Certification Kits — 29 Individual Assets|Executive Assistant / Office Coordinator — Starter & Certification Kit
+0139|Role Starter & Certification Kits — 29 Individual Assets|Sales Director — Starter & Certification Kit
+0140|Role Starter & Certification Kits — 29 Individual Assets|Sales Development Representative / Caller — Starter & Certification Kit
+0141|Role Starter & Certification Kits — 29 Individual Assets|Account Executive / Closer — Starter & Certification Kit
+0142|Role Starter & Certification Kits — 29 Individual Assets|Sales Operations / CRM Coordinator — Starter & Certification Kit
+0143|Role Starter & Certification Kits — 29 Individual Assets|Lead Research Specialist — Starter & Certification Kit
+0144|Role Starter & Certification Kits — 29 Individual Assets|Marketing and Content Coordinator — Starter & Certification Kit
+0145|Role Starter & Certification Kits — 29 Individual Assets|Client Intake and Onboarding Coordinator — Starter & Certification Kit
+0146|Role Starter & Certification Kits — 29 Individual Assets|Client Success Manager — Starter & Certification Kit
+0147|Role Starter & Certification Kits — 29 Individual Assets|Project and Delivery Manager — Starter & Certification Kit
+0148|Role Starter & Certification Kits — 29 Individual Assets|Cyber Risk Assessment Analyst — Starter & Certification Kit
+0149|Role Starter & Certification Kits — 29 Individual Assets|Healthcare Workflow Analyst — Starter & Certification Kit
+0150|Role Starter & Certification Kits — 29 Individual Assets|Security and Operations Advisor — Starter & Certification Kit
+0151|Role Starter & Certification Kits — 29 Individual Assets|Quality Assurance Reviewer — Starter & Certification Kit
+0152|Role Starter & Certification Kits — 29 Individual Assets|Compliance and Risk Coordinator — Starter & Certification Kit
+0153|Role Starter & Certification Kits — 29 Individual Assets|Finance and Billing Coordinator — Starter & Certification Kit
+0154|Role Starter & Certification Kits — 29 Individual Assets|Bookkeeping / Payroll Liaison — Starter & Certification Kit
+0155|Role Starter & Certification Kits — 29 Individual Assets|Procurement and Vendor Coordinator — Starter & Certification Kit
+0156|Role Starter & Certification Kits — 29 Individual Assets|Technology and Automation Administrator — Starter & Certification Kit
+0157|Role Starter & Certification Kits — 29 Individual Assets|CRM and Data Administrator — Starter & Certification Kit
+0158|Role Starter & Certification Kits — 29 Individual Assets|Helpdesk and Support Coordinator — Starter & Certification Kit
+0159|Role Starter & Certification Kits — 29 Individual Assets|People Operations Coordinator — Starter & Certification Kit
+0160|Role Starter & Certification Kits — 29 Individual Assets|Training and Performance Coordinator — Starter & Certification Kit
+0161|Role Starter & Certification Kits — 29 Individual Assets|Documentation and SOP Librarian — Starter & Certification Kit
+0162|Role Starter & Certification Kits — 29 Individual Assets|Partnerships and Licensing Manager — Starter & Certification Kit
+0163|Role Starter & Certification Kits — 29 Individual Assets|Marketplace and Operator Program Coordinator — Starter & Certification Kit
+0164|Department Workstation Binders — 12 Individual Assets|Executive Office and Governance — Department Workstation Binder
+0165|Department Workstation Binders — 12 Individual Assets|Enterprise Operations and PMO — Department Workstation Binder
+0166|Department Workstation Binders — 12 Individual Assets|Revenue and Sales — Department Workstation Binder
+0167|Department Workstation Binders — 12 Individual Assets|Marketing and Lead Intelligence — Department Workstation Binder
+0168|Department Workstation Binders — 12 Individual Assets|Client Success and Account Management — Department Workstation Binder
+0169|Department Workstation Binders — 12 Individual Assets|Sentinel Zero Service Delivery — Department Workstation Binder
+0170|Department Workstation Binders — 12 Individual Assets|Quality, Compliance and Risk — Department Workstation Binder
+0171|Department Workstation Binders — 12 Individual Assets|Finance, Billing and Administration — Department Workstation Binder
+0172|Department Workstation Binders — 12 Individual Assets|Technology, Automation and Data — Department Workstation Binder
+0173|Department Workstation Binders — 12 Individual Assets|People, Training and Workforce — Department Workstation Binder
+0174|Department Workstation Binders — 12 Individual Assets|Knowledge, Documentation and IP — Department Workstation Binder
+0175|Department Workstation Binders — 12 Individual Assets|Partnerships, Licensing and Marketplace — Department Workstation Binder
+0176|Department Workstation Binders — 12 Individual Assets|EXE-001 — Daily Command Review
+0177|Department Workstation Binders — 12 Individual Assets|EXE-002 — Executive Decision Record
+0178|Department Workstation Binders — 12 Individual Assets|EXE-003 — Major Commitment Approval
+0179|Department Workstation Binders — 12 Individual Assets|EXE-004 — New Division / Offer Gate
+0180|Department Workstation Binders — 12 Individual Assets|EXE-005 — Delegation of Authority
+0181|Department Workstation Binders — 12 Individual Assets|EXE-006 — Risk Acceptance
+0182|Department Workstation Binders — 12 Individual Assets|EXE-007 — Weekly Executive Review
+0183|Department Workstation Binders — 12 Individual Assets|EXE-008 — Emergency Executive Succession
+0184|Department Workstation Binders — 12 Individual Assets|OPS-001 — Work Intake
+0185|Department Workstation Binders — 12 Individual Assets|OPS-002 — Priority Setting
+0186|Department Workstation Binders — 12 Individual Assets|OPS-003 — Capacity Planning
+0187|Department Workstation Binders — 12 Individual Assets|OPS-004 — Project Kickoff
+0188|Department Workstation Binders — 12 Individual Assets|OPS-005 — Blocker Escalation
+0189|Department Workstation Binders — 12 Individual Assets|OPS-006 — Cross-Department Handoff
+0190|Department Workstation Binders — 12 Individual Assets|OPS-007 — Change Control
+0191|Department Workstation Binders — 12 Individual Assets|OPS-008 — Weekly Operations Review
+0192|Department Workstation Binders — 12 Individual Assets|SAL-001 — Daily Queue Preparation
+0193|Department Workstation Binders — 12 Individual Assets|SAL-002 — Human Outbound Call
+0194|Department Workstation Binders — 12 Individual Assets|SAL-003 — Call Logging
+0195|Department Workstation Binders — 12 Individual Assets|SAL-004 — Follow-Up Sequence
+0196|Department Workstation Binders — 12 Individual Assets|SAL-005 — Discovery Booking and Handoff
+0197|Department Workstation Binders — 12 Individual Assets|SAL-006 — Discovery and Fit Decision
+0198|Department Workstation Binders — 12 Individual Assets|SAL-007 — Proposal Preparation and QA
+0199|Department Workstation Binders — 12 Individual Assets|SAL-008 — Payment Gate and Sales Handoff
+0200|Department Workstation Binders — 12 Individual Assets|MKT-001 — Lead Research
