@@ -1,0 +1,77 @@
+name: Owner System Health
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 13 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Check owner-visible systems
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const systems = [
+            ['Master Owner Dashboard','https://cezarmorris2021.github.io/ssag-hub-site/owner-master-dashboard/'],
+            ['Arizona Website Opportunity Engine','https://cezarmorris2021.github.io/ssag-hub-site/arizona-website-opportunity-engine/'],
+            ['Revenue-Ready Make-Good Suite','https://cezarmorris2021.github.io/ssag-hub-site/revenue-ready-make-good/'],
+            ['SSAG Owner Launchpad','https://ssag-owner-launchpad.vercel.app'],
+            ['SSAG Platform Public','https://ssag-platform-public.vercel.app'],
+            ['SSAG Command Center','https://ssag-command-center.vercel.app'],
+            ['SSAG Command Center Elite','https://ssag-command-center-elite.vercel.app'],
+            ['Sentinel Zero Public','https://cezarmorris2021.github.io/Sentinel-Zero-LLC/'],
+            ['Sentinel Zero Enterprise','https://sentinelzeroenterprise2026-08-21.vercel.app'],
+            ['Cyber Exposure Score','https://sentinel-zero-cyber-exposure-score.vercel.app'],
+            ['Sentinel Zero Sales Coach','https://sentinel-zero-sales-coach.vercel.app'],
+            ['Sentinel Zero Proposal Builder','https://sentinel-zero-proposal-builder.vercel.app'],
+            ['Sentinel Zero Review Intake','https://sentinel-zero-review-intake.vercel.app'],
+            ['Savings Command Center','https://savings-command-center.vercel.app'],
+            ['Retail Arbitrage Command Center','https://retail-arbitrage-command-center.vercel.app'],
+            ['Employee Call Dispatch','https://datatranferservice-hue.github.io/employee-call-dispatch/'],
+            ['CallFlow Health','https://callflow-command.onrender.com/api/health'],
+            ['Sentinel Zero AI Outbound Health','https://sentinel-zero-ai-outbound.onrender.com/health'],
+            ['Two-Player Chess Health','https://cezar-two-player-chess.onrender.com/health'],
+            ['SSAG Command Center Backend Health','https://ssag-command-center-backend.onrender.com/api/health'],
+            ['SSAG Backend Health','https://ssag-backend.onrender.com/api/health']
+          ];
+
+          async function check([name,url]) {
+            const started = Date.now();
+            try {
+              const res = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(20000), headers: {'user-agent':'SSAG-Owner-Health/1.0'} });
+              return { name, url, ok: res.status >= 200 && res.status < 400, status: res.status, ms: Date.now()-started };
+            } catch (e) {
+              return { name, url, ok: false, status: null, ms: Date.now()-started, error: String(e.message || e).slice(0,180) };
+            }
+          }
+
+          (async () => {
+            const results = [];
+            for (const system of systems) results.push(await check(system));
+            const out = {
+              checkedAt: new Date().toISOString(),
+              total: results.length,
+              healthy: results.filter(x=>x.ok).length,
+              unhealthy: results.filter(x=>!x.ok).length,
+              systems: results
+            };
+            fs.writeFileSync('owner-master-dashboard/system-status.json', JSON.stringify(out,null,2)+'\n');
+          })().catch(e => { console.error(e); process.exit(1); });
+          NODE
+      - name: Publish status snapshot
+        run: |
+          git config user.name "SSAG Health Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add owner-master-dashboard/system-status.json
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: update owner system health [skip ci]"
+          git push
