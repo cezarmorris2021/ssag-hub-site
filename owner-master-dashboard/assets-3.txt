@@ -1,74 +1,74 @@
-0201|Department Workstation Binders — 12 Individual Assets|MKT-002 — Lead Verification
-0202|Department Workstation Binders — 12 Individual Assets|MKT-003 — Content Brief
-0203|Department Workstation Binders — 12 Individual Assets|MKT-004 — Claim Review
-0204|Department Workstation Binders — 12 Individual Assets|MKT-005 — Proof Permission
-0205|Department Workstation Binders — 12 Individual Assets|MKT-006 — Campaign Launch
-0206|Department Workstation Binders — 12 Individual Assets|MKT-007 — Source Performance Review
-0207|Department Workstation Binders — 12 Individual Assets|MKT-008 — Public Asset Release
-0208|Department Workstation Binders — 12 Individual Assets|CSM-001 — Paid Client Intake
-0209|Department Workstation Binders — 12 Individual Assets|CSM-002 — Welcome and Expectations
-0210|Department Workstation Binders — 12 Individual Assets|CSM-003 — Client Kickoff
-0211|Department Workstation Binders — 12 Individual Assets|CSM-004 — Client Health Review
-0212|Department Workstation Binders — 12 Individual Assets|CSM-005 — Client Issue Escalation
-0213|Department Workstation Binders — 12 Individual Assets|CSM-006 — Monthly Client Report
-0214|Department Workstation Binders — 12 Individual Assets|CSM-007 — Renewal Review
-0215|Department Workstation Binders — 12 Individual Assets|CSM-008 — Client Offboarding
-0216|Department Workstation Binders — 12 Individual Assets|DLV-001 — Scope and Prerequisite Confirmation
-0217|Department Workstation Binders — 12 Individual Assets|DLV-002 — Evidence Request and Handling
-0218|Department Workstation Binders — 12 Individual Assets|DLV-003 — Business Cyber Risk Review
-0219|Department Workstation Binders — 12 Individual Assets|DLV-004 — Healthcare Workflow Mapping
-0220|Department Workstation Binders — 12 Individual Assets|DLV-005 — Findings Draft
-0221|Department Workstation Binders — 12 Individual Assets|DLV-006 — Recommendation Roadmap
-0222|Department Workstation Binders — 12 Individual Assets|DLV-007 — Pilot Implementation Support
-0223|Department Workstation Binders — 12 Individual Assets|DLV-008 — Final Delivery and Handoff
-0224|Department Workstation Binders — 12 Individual Assets|QCR-001 — Pre-Sale Claim Review
-0225|Department Workstation Binders — 12 Individual Assets|QCR-002 — Proposal QA
-0226|Department Workstation Binders — 12 Individual Assets|QCR-003 — Deliverable QA
-0227|Department Workstation Binders — 12 Individual Assets|QCR-004 — Data and PHI Boundary Gate
-0228|Department Workstation Binders — 12 Individual Assets|QCR-005 — Incident Intake and Triage
-0229|Department Workstation Binders — 12 Individual Assets|QCR-006 — Risk Register Management
-0230|Department Workstation Binders — 12 Individual Assets|QCR-007 — External Review Trigger
-0231|Department Workstation Binders — 12 Individual Assets|QCR-008 — Corrective Action Verification
-0232|Department Workstation Binders — 12 Individual Assets|FIN-001 — New Client Financial Setup
-0233|Department Workstation Binders — 12 Individual Assets|FIN-002 — Invoice Issuance
-0234|Department Workstation Binders — 12 Individual Assets|FIN-003 — Payment Application and Receipt
-0235|Department Workstation Binders — 12 Individual Assets|FIN-004 — Receivables Follow-Up
-0236|Department Workstation Binders — 12 Individual Assets|FIN-005 — Expense Approval and Reimbursement
-0237|Department Workstation Binders — 12 Individual Assets|FIN-006 — Purchase and Procurement Approval
-0238|Department Workstation Binders — 12 Individual Assets|FIN-007 — Vendor Onboarding and Renewal
-0239|Department Workstation Binders — 12 Individual Assets|FIN-008 — Monthly Financial Handoff
-0240|Department Workstation Binders — 12 Individual Assets|TEC-001 — Access Request and Approval
-0241|Department Workstation Binders — 12 Individual Assets|TEC-002 — Account Provisioning
-0242|Department Workstation Binders — 12 Individual Assets|TEC-003 — CRM Data Entry and Stage Control
-0243|Department Workstation Binders — 12 Individual Assets|TEC-004 — Data Quality Review
-0244|Department Workstation Binders — 12 Individual Assets|TEC-005 — Technology Change Request
-0245|Department Workstation Binders — 12 Individual Assets|TEC-006 — Automation Deployment
-0246|Department Workstation Binders — 12 Individual Assets|TEC-007 — Backup and Restore Test
-0247|Department Workstation Binders — 12 Individual Assets|TEC-008 — Outage / Security Event Response
-0248|Department Workstation Binders — 12 Individual Assets|PPL-001 — Headcount / Seat Request
-0249|Department Workstation Binders — 12 Individual Assets|PPL-002 — Candidate Evaluation
-0250|Department Workstation Binders — 12 Individual Assets|PPL-003 — Hiring and Worker Classification Gate
-0251|Department Workstation Binders — 12 Individual Assets|PPL-004 — New Worker Onboarding
-0252|Department Workstation Binders — 12 Individual Assets|PPL-005 — Role Training and Authorization
-0253|Department Workstation Binders — 12 Individual Assets|PPL-006 — Performance Check-In and Coaching
-0254|Department Workstation Binders — 12 Individual Assets|PPL-007 — Employee Concern / Complaint Intake
-0255|Department Workstation Binders — 12 Individual Assets|PPL-008 — Offboarding and Access Revocation
-0256|Department Workstation Binders — 12 Individual Assets|KDI-001 — New Document / SOP Request
-0257|Department Workstation Binders — 12 Individual Assets|KDI-002 — SOP Drafting Standard
-0258|Department Workstation Binders — 12 Individual Assets|KDI-003 — Document Review and Approval
-0259|Department Workstation Binders — 12 Individual Assets|KDI-004 — Version Control and Publication
-0260|Department Workstation Binders — 12 Individual Assets|KDI-005 — Document Change Request
-0261|Department Workstation Binders — 12 Individual Assets|KDI-006 — Controlled Copy and Archive
-0262|Department Workstation Binders — 12 Individual Assets|KDI-007 — IP and Asset Inventory
-0263|Department Workstation Binders — 12 Individual Assets|KDI-008 — Quarterly Knowledge Audit
-0264|Department Workstation Binders — 12 Individual Assets|PLM-001 — Partner / Operator Lead Intake
-0265|Department Workstation Binders — 12 Individual Assets|PLM-002 — Due Diligence
-0266|Department Workstation Binders — 12 Individual Assets|PLM-003 — Economic Terms Development
-0267|Department Workstation Binders — 12 Individual Assets|PLM-004 — Agreement Review and Approval
-0268|Department Workstation Binders — 12 Individual Assets|PLM-005 — Partner Activation
-0269|Department Workstation Binders — 12 Individual Assets|PLM-006 — Operator / Licensee Onboarding
-0270|Department Workstation Binders — 12 Individual Assets|PLM-007 — Partner / Operator Performance Review
-0271|Department Workstation Binders — 12 Individual Assets|PLM-008 — Suspension / Termination and Offboarding
+0201|Department SOPs — 96 Individual Assets|MKT-002 — Lead Verification
+0202|Department SOPs — 96 Individual Assets|MKT-003 — Content Brief
+0203|Department SOPs — 96 Individual Assets|MKT-004 — Claim Review
+0204|Department SOPs — 96 Individual Assets|MKT-005 — Proof Permission
+0205|Department SOPs — 96 Individual Assets|MKT-006 — Campaign Launch
+0206|Department SOPs — 96 Individual Assets|MKT-007 — Source Performance Review
+0207|Department SOPs — 96 Individual Assets|MKT-008 — Public Asset Release
+0208|Department SOPs — 96 Individual Assets|CSM-001 — Paid Client Intake
+0209|Department SOPs — 96 Individual Assets|CSM-002 — Welcome and Expectations
+0210|Department SOPs — 96 Individual Assets|CSM-003 — Client Kickoff
+0211|Department SOPs — 96 Individual Assets|CSM-004 — Client Health Review
+0212|Department SOPs — 96 Individual Assets|CSM-005 — Client Issue Escalation
+0213|Department SOPs — 96 Individual Assets|CSM-006 — Monthly Client Report
+0214|Department SOPs — 96 Individual Assets|CSM-007 — Renewal Review
+0215|Department SOPs — 96 Individual Assets|CSM-008 — Client Offboarding
+0216|Department SOPs — 96 Individual Assets|DLV-001 — Scope and Prerequisite Confirmation
+0217|Department SOPs — 96 Individual Assets|DLV-002 — Evidence Request and Handling
+0218|Department SOPs — 96 Individual Assets|DLV-003 — Business Cyber Risk Review
+0219|Department SOPs — 96 Individual Assets|DLV-004 — Healthcare Workflow Mapping
+0220|Department SOPs — 96 Individual Assets|DLV-005 — Findings Draft
+0221|Department SOPs — 96 Individual Assets|DLV-006 — Recommendation Roadmap
+0222|Department SOPs — 96 Individual Assets|DLV-007 — Pilot Implementation Support
+0223|Department SOPs — 96 Individual Assets|DLV-008 — Final Delivery and Handoff
+0224|Department SOPs — 96 Individual Assets|QCR-001 — Pre-Sale Claim Review
+0225|Department SOPs — 96 Individual Assets|QCR-002 — Proposal QA
+0226|Department SOPs — 96 Individual Assets|QCR-003 — Deliverable QA
+0227|Department SOPs — 96 Individual Assets|QCR-004 — Data and PHI Boundary Gate
+0228|Department SOPs — 96 Individual Assets|QCR-005 — Incident Intake and Triage
+0229|Department SOPs — 96 Individual Assets|QCR-006 — Risk Register Management
+0230|Department SOPs — 96 Individual Assets|QCR-007 — External Review Trigger
+0231|Department SOPs — 96 Individual Assets|QCR-008 — Corrective Action Verification
+0232|Department SOPs — 96 Individual Assets|FIN-001 — New Client Financial Setup
+0233|Department SOPs — 96 Individual Assets|FIN-002 — Invoice Issuance
+0234|Department SOPs — 96 Individual Assets|FIN-003 — Payment Application and Receipt
+0235|Department SOPs — 96 Individual Assets|FIN-004 — Receivables Follow-Up
+0236|Department SOPs — 96 Individual Assets|FIN-005 — Expense Approval and Reimbursement
+0237|Department SOPs — 96 Individual Assets|FIN-006 — Purchase and Procurement Approval
+0238|Department SOPs — 96 Individual Assets|FIN-007 — Vendor Onboarding and Renewal
+0239|Department SOPs — 96 Individual Assets|FIN-008 — Monthly Financial Handoff
+0240|Department SOPs — 96 Individual Assets|TEC-001 — Access Request and Approval
+0241|Department SOPs — 96 Individual Assets|TEC-002 — Account Provisioning
+0242|Department SOPs — 96 Individual Assets|TEC-003 — CRM Data Entry and Stage Control
+0243|Department SOPs — 96 Individual Assets|TEC-004 — Data Quality Review
+0244|Department SOPs — 96 Individual Assets|TEC-005 — Technology Change Request
+0245|Department SOPs — 96 Individual Assets|TEC-006 — Automation Deployment
+0246|Department SOPs — 96 Individual Assets|TEC-007 — Backup and Restore Test
+0247|Department SOPs — 96 Individual Assets|TEC-008 — Outage / Security Event Response
+0248|Department SOPs — 96 Individual Assets|PPL-001 — Headcount / Seat Request
+0249|Department SOPs — 96 Individual Assets|PPL-002 — Candidate Evaluation
+0250|Department SOPs — 96 Individual Assets|PPL-003 — Hiring and Worker Classification Gate
+0251|Department SOPs — 96 Individual Assets|PPL-004 — New Worker Onboarding
+0252|Department SOPs — 96 Individual Assets|PPL-005 — Role Training and Authorization
+0253|Department SOPs — 96 Individual Assets|PPL-006 — Performance Check-In and Coaching
+0254|Department SOPs — 96 Individual Assets|PPL-007 — Employee Concern / Complaint Intake
+0255|Department SOPs — 96 Individual Assets|PPL-008 — Offboarding and Access Revocation
+0256|Department SOPs — 96 Individual Assets|KDI-001 — New Document / SOP Request
+0257|Department SOPs — 96 Individual Assets|KDI-002 — SOP Drafting Standard
+0258|Department SOPs — 96 Individual Assets|KDI-003 — Document Review and Approval
+0259|Department SOPs — 96 Individual Assets|KDI-004 — Version Control and Publication
+0260|Department SOPs — 96 Individual Assets|KDI-005 — Document Change Request
+0261|Department SOPs — 96 Individual Assets|KDI-006 — Controlled Copy and Archive
+0262|Department SOPs — 96 Individual Assets|KDI-007 — IP and Asset Inventory
+0263|Department SOPs — 96 Individual Assets|KDI-008 — Quarterly Knowledge Audit
+0264|Department SOPs — 96 Individual Assets|PLM-001 — Partner / Operator Lead Intake
+0265|Department SOPs — 96 Individual Assets|PLM-002 — Due Diligence
+0266|Department SOPs — 96 Individual Assets|PLM-003 — Economic Terms Development
+0267|Department SOPs — 96 Individual Assets|PLM-004 — Agreement Review and Approval
+0268|Department SOPs — 96 Individual Assets|PLM-005 — Partner Activation
+0269|Department SOPs — 96 Individual Assets|PLM-006 — Operator / Licensee Onboarding
+0270|Department SOPs — 96 Individual Assets|PLM-007 — Partner / Operator Performance Review
+0271|Department SOPs — 96 Individual Assets|PLM-008 — Suspension / Termination and Offboarding
 0272|Controlled Forms / Logs / Checklists — 32 Individual Assets|F-001 — Executive Decision Record
 0273|Controlled Forms / Logs / Checklists — 32 Individual Assets|F-002 — Meeting Agenda and Action Record
 0274|Controlled Forms / Logs / Checklists — 32 Individual Assets|F-003 — Work Intake Request
