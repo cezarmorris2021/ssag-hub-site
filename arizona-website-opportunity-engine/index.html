@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#071521" />
+  <meta name="description" content="SSAG Arizona Website Opportunity Engine: discover Arizona businesses whose public listing has no website, verify the opportunity, generate a tailored website preview, create a call script, and track the sale." />
+  <title>Arizona Website Opportunity Engine | SSAG</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-wrap">
+      <a class="back-link" href="../" aria-label="Back to SSAG Hub">← SSAG Hub</a>
+      <div class="brand-line">
+        <div class="mark" aria-hidden="true">AZ</div>
+        <div>
+          <p class="eyebrow">SSAG ACQUISITION SYSTEM</p>
+          <h1>Arizona Website Opportunity Engine</h1>
+          <p class="subhead">Find → Verify → Build → Call → Follow Up → Close</p>
+        </div>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button id="backupBtn" class="btn secondary">Backup</button>
+      <label class="btn secondary file-btn">Restore<input id="restoreInput" type="file" accept="application/json" hidden /></label>
+      <button id="exportBtn" class="btn secondary">Export CSV</button>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="notice warning">
+      <strong>Accuracy rule:</strong> “No website” means no website URL was present in the public business data returned by the search. Use <b>Verify</b> before telling an owner they have no website. The system never invents reviews, licenses, years in business, or unverified claims.
+    </section>
+
+    <section class="metrics" aria-label="Pipeline metrics">
+      <article><span id="metricLeads">0</span><small>Leads saved</small></article>
+      <article><span id="metricVerified">0</span><small>Verified no website</small></article>
+      <article><span id="metricPreviews">0</span><small>Previews built</small></article>
+      <article><span id="metricCalled">0</span><small>Called</small></article>
+      <article><span id="metricInterested">0</span><small>Interested</small></article>
+      <article class="money"><span id="metricSold">0</span><small>Sold</small></article>
+      <article class="money"><span id="metricRevenue">$0</span><small>Setup revenue</small></article>
+      <article class="money"><span id="metricMrr">$0</span><small>New MRR</small></article>
+    </section>
+
+    <section class="panel search-panel">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">LIVE ARIZONA SEARCH</p>
+          <h2>Find businesses whose public listing has no website</h2>
+        </div>
+        <span id="searchState" class="status-pill idle">Ready</span>
+      </div>
+
+      <div class="search-grid">
+        <label>Search mode
+          <select id="searchMode">
+            <option value="statewide">Statewide territory sweep</option>
+            <option value="city">City / town</option>
+            <option value="zip">ZIP code</option>
+          </select>
+        </label>
+        <label id="locationLabel" class="hidden">City / ZIP
+          <input id="locationInput" type="text" inputmode="search" placeholder="Tucson or 85701" autocomplete="postal-code" />
+        </label>
+        <label>Industry focus
+          <select id="industryFilter">
+            <option value="all">All local businesses</option>
+            <option value="home">Home services / contractors</option>
+            <option value="beauty">Beauty / barber / salon</option>
+            <option value="auto">Automotive</option>
+            <option value="food">Food / restaurant</option>
+            <option value="health">Health / wellness</option>
+            <option value="professional">Professional services</option>
+            <option value="retail">Retail</option>
+          </select>
+        </label>
+        <label>Radius
+          <select id="radiusSelect">
+            <option value="4000">2.5 miles</option>
+            <option value="8000" selected>5 miles</option>
+            <option value="16000">10 miles</option>
+            <option value="24000">15 miles</option>
+          </select>
+        </label>
+        <label>Maximum results
+          <select id="maxResults">
+            <option value="50">50</option>
+            <option value="100" selected>100</option>
+            <option value="200">200</option>
+            <option value="400">400</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="search-actions">
+        <button id="searchBtn" class="btn primary">Search Live Businesses</button>
+        <button id="stopBtn" class="btn danger hidden">Stop Search</button>
+        <button id="clearResultsBtn" class="btn secondary">Clear Results</button>
+      </div>
+
+      <div id="progressWrap" class="progress-wrap hidden">
+        <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+        <div class="progress-copy"><span id="progressText">Starting…</span><span id="progressCount"></span></div>
+      </div>
+
+      <details class="data-note">
+        <summary>How the live search works</summary>
+        <p>This tool uses public OpenStreetMap business data through Overpass, then filters for named business records with a phone number and no listed website field. Statewide mode sweeps major Arizona markets in batches so it remains usable on a phone. Rural or missing listings can be searched by city or ZIP. OpenStreetMap data can be incomplete, so every lead remains a prospect until verified.</p>
+      </details>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head filters-head">
+        <div>
+          <p class="eyebrow">OPPORTUNITY QUEUE</p>
+          <h2>Search results</h2>
+        </div>
+        <div class="result-tools">
+          <input id="resultSearch" type="search" placeholder="Filter results…" />
+          <select id="resultSort" aria-label="Sort results">
+            <option value="score">Highest opportunity score</option>
+            <option value="name">Business name</option>
+            <option value="city">City</option>
+          </select>
+        </div>
+      </div>
+      <div id="resultsEmpty" class="empty-state">
+        <strong>No live results yet.</strong>
+        <p>Run a statewide, city, or ZIP search. Leads with a phone number and no website listed in the source data will appear here.</p>
+      </div>
+      <div id="resultsList" class="lead-grid"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head filters-head">
+        <div>
+          <p class="eyebrow">SALES PIPELINE</p>
+          <h2>Saved leads & follow-up</h2>
+        </div>
+        <div class="result-tools">
+          <input id="pipelineSearch" type="search" placeholder="Search pipeline…" />
+          <select id="pipelineStatusFilter" aria-label="Filter pipeline status">
+            <option value="all">All statuses</option>
+            <option value="New">New</option>
+            <option value="Verify">Needs verification</option>
+            <option value="Verified No Website">Verified no website</option>
+            <option value="Preview Ready">Preview ready</option>
+            <option value="Called">Called</option>
+            <option value="Interested">Interested</option>
+            <option value="Follow Up">Follow up</option>
+            <option value="Sold">Sold</option>
+            <option value="Not Fit">Not fit</option>
+          </select>
+        </div>
+      </div>
+      <div id="pipelineEmpty" class="empty-state">
+        <strong>Your pipeline is empty.</strong>
+        <p>Save a lead from the opportunity queue and it will stay on this device until you export, back up, or remove it.</p>
+      </div>
+      <div id="pipelineList" class="pipeline-list"></div>
+    </section>
+
+    <section class="panel settings-panel">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">OFFER CONTROL</p>
+          <h2>Website package & sales script</h2>
+        </div>
+      </div>
+      <div class="settings-grid">
+        <label>Setup price
+          <div class="money-input"><span>$</span><input id="setupPrice" type="number" min="0" step="50" value="799" /></div>
+        </label>
+        <label>Monthly service
+          <div class="money-input"><span>$</span><input id="monthlyPrice" type="number" min="0" step="10" value="89" /></div>
+        </label>
+        <label>Caller name
+          <input id="callerName" type="text" value="Cezar" />
+        </label>
+        <label>Company name
+          <input id="sellerCompany" type="text" value="SSAG" />
+        </label>
+      </div>
+      <p class="muted">The script is intentionally short. It sells the preview, not a long technical explanation. Prices are editable and saved locally.</p>
+    </section>
+
+    <footer class="footer">
+      <p>SSAG Arizona Website Opportunity Engine • Internal acquisition tool</p>
+      <p>Business data: © OpenStreetMap contributors. Verify all business details before outreach or publication.</p>
+    </footer>
+  </main>
+
+  <dialog id="leadDialog" class="modal">
+    <form method="dialog" class="modal-shell">
+      <button class="modal-close" value="cancel" aria-label="Close">×</button>
+      <div id="leadDialogBody"></div>
+    </form>
+  </dialog>
+
+  <dialog id="previewDialog" class="modal preview-modal">
+    <div class="modal-shell preview-shell">
+      <div class="preview-toolbar">
+        <div>
+          <p class="eyebrow">CLIENT PREVIEW</p>
+          <strong id="previewTitle">Website preview</strong>
+        </div>
+        <div class="toolbar-actions">
+          <button id="downloadPreviewBtn" class="btn primary" type="button">Download Site HTML</button>
+          <button id="copyPreviewLinkBtn" class="btn secondary" type="button">Copy Pitch</button>
+          <button id="closePreviewBtn" class="btn secondary" type="button">Close</button>
+        </div>
+      </div>
+      <iframe id="previewFrame" title="Generated website preview"></iframe>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
