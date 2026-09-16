@@ -106,8 +106,9 @@
       </div>
 
       <details class="data-note">
-        <summary>How the live search works</summary>
+        <summary>How the live search works / data-source limits</summary>
         <p>This tool uses public OpenStreetMap business data through Overpass, then filters for named business records with a phone number and no listed website field. Statewide mode sweeps major Arizona markets in batches so it remains usable on a phone. Rural or missing listings can be searched by city or ZIP. OpenStreetMap data can be incomplete, so every lead remains a prospect until verified.</p>
+        <p>City/ZIP lookup uses the public Nominatim geocoder only after you request a lookup, caches results on this device for 30 days, and does not use it for the statewide sweep. The public Nominatim service requires light use (maximum one request per second) and attribution. For high-volume production use, SSAG should move geocoding/business discovery to a commercial or self-hosted data source. <a href="https://operations.osmfoundation.org/policies/nominatim/" target="_blank" rel="noopener">Nominatim usage policy</a>.</p>
       </details>
     </section>
 
@@ -208,7 +209,7 @@
         </div>
         <div class="toolbar-actions">
           <button id="downloadPreviewBtn" class="btn primary" type="button">Download Site HTML</button>
-          <button id="copyPreviewLinkBtn" class="btn secondary" type="button">Copy Pitch</button>
+          <button id="copyPreviewLinkBtn" class="btn secondary" type="button">Copy Preview Link</button>
           <button id="closePreviewBtn" class="btn secondary" type="button">Close</button>
         </div>
       </div>
