@@ -1,0 +1,89 @@
+0301|Controlled Forms / Logs / Checklists — 32 Individual Assets|F-030 — Continuity Test Record
+0302|Controlled Forms / Logs / Checklists — 32 Individual Assets|F-031 — Monthly Department Scorecard
+0303|Controlled Forms / Logs / Checklists — 32 Individual Assets|F-032 — Department Weekly Review
+0304|Current Vercel Projects — Counted Individually|savings-command-center
+0305|Current Vercel Projects — Counted Individually|retail-arbitrage-command-center
+0306|Current Vercel Projects — Counted Individually|sentinel_zero_call_command_vercel_2026-08-21
+0307|Current Vercel Projects — Counted Individually|sentinel_zero_call_command_vercel_fixed_3.2.2_2026-08-21
+0308|Current Vercel Projects — Counted Individually|ssag-owner-launchpad
+0309|Current Vercel Projects — Counted Individually|sentinel_zero_enterprise_2026-08-21
+0310|Current Vercel Projects — Counted Individually|ssag-platform-public
+0311|Current Vercel Projects — Counted Individually|ssag-command-center-elite
+0312|Current Vercel Projects — Counted Individually|ssag-command-center
+0313|Current Vercel Projects — Counted Individually|sentinel-zero-sales-coach
+0314|Current Vercel Projects — Counted Individually|sentinel-zero-proposal-builder
+0315|Current Vercel Projects — Counted Individually|sentinel-zero-review-intake
+0316|Current Vercel Projects — Counted Individually|sentinel-zero-cyber-exposure-score
+0317|Current Vercel Projects — Counted Individually|sentinel_zero_call_command_vercel_fixed_3.2.1_2026-08-21
+0318|Github Repositories / Repository Assets Currently Recovered|datatranferservice-hue/employee-call-dispatch
+0319|Github Repositories / Repository Assets Currently Recovered|cezarmorris2021/ssag-command-center (known through Vercel Git link)
+0320|Github Repositories / Repository Assets Currently Recovered|cezarmorris2021/ssag-command-center-elite (known through Vercel Git link)
+0321|Standalone Master Files / Packages|SSAG Master Holding Blueprint 2026
+0322|Standalone Master Files / Packages|SeenItSaveIt Technical Developer Handoff
+0323|Standalone Master Files / Packages|SeenItSaveIt Turnkey MVP ZIP
+0324|Standalone Master Files / Packages|Circuit Salvage Technical Developer Handoff Blueprint
+0325|Standalone Master Files / Packages|SSAG Autonomous Acquisition System ZIP
+0326|Standalone Master Files / Packages|Cezar Holding Company + Family Legacy Blueprint
+0327|Standalone Master Files / Packages|SSAG Master Ecosystem Blueprint 2026
+0328|Standalone Master Files / Packages|SSAG Full Build Execution Pack
+0329|Standalone Master Files / Packages|SSAG Ultimate Enterprise Master Binder V3.1 Audited July 2026
+0330|Standalone Master Files / Packages|SSAG Operationalization V2 Master Binder July 2026
+0331|Standalone Master Files / Packages|SSAG People & Office Master Binder July 2026
+0332|Standalone Master Files / Packages|SSAG MobileShield Projection Breakdown
+0333|Standalone Master Files / Packages|SSAG / Sentinel Zero Ecosystem Vision
+0334|Standalone Master Files / Packages|Sentinel Zero / SSAG Ecosystem Big Picture
+0335|Standalone Master Files / Packages|SSAG Public Hub Website
+0336|Standalone Master Files / Packages|SSAG Marketplace Website
+0337|Standalone Master Files / Packages|SSAG Operator Portal
+0338|Standalone Master Files / Packages|SSAG Licensing Portal
+0339|Standalone Master Files / Packages|SSAG Master Owner Command Center / Owner Dashboard
+0340|Standalone Master Files / Packages|SSAG Offline Internal Staff Portal
+0341|Standalone Master Files / Packages|Sentinel Zero Public Website
+0342|Standalone Master Files / Packages|Sentinel Zero MobileShield Product System
+0343|Standalone Master Files / Packages|Sentinel Zero MobileShield Client Portal
+0344|Standalone Master Files / Packages|Sentinel Zero Outbound AI Cold-Calling System
+0345|Standalone Master Files / Packages|Sentinel Zero CRM / Sales Pipeline
+0346|Standalone Master Files / Packages|Employee Call Dispatch Owner/Admin Dashboard
+0347|Standalone Master Files / Packages|Employee Call Dispatch Employee Login / On-Duty Portal
+0348|Standalone Master Files / Packages|Employee Call Dispatch Routing Backend / API
+0349|Standalone Master Files / Packages|Universal Data Connection / CallFlow Endpoint
+0350|Standalone Master Files / Packages|Master Acquisition Engine
+0351|Standalone Master Files / Packages|SSAG AI Call Tracker
+0352|Standalone Master Files / Packages|Couponing Website / Savings Deal Search Frontend
+0353|Standalone Master Files / Packages|Local Arbitrage Scanner Frontend
+0354|Standalone Master Files / Packages|QuoteForge Local Estimator / Web App
+0355|Standalone Master Files / Packages|StayPilot Co-Hosting / Property Operations Platform
+0356|Standalone Master Files / Packages|Hospitality PMS Dashboard / App
+0357|Standalone Master Files / Packages|SignalCurrent Traffic / Advertising Website
+0358|Standalone Master Files / Packages|AscendEdge Media Group Website
+0359|Standalone Master Files / Packages|Up Up and Away Website
+0360|Standalone Master Files / Packages|Quantum Gadgetry Website
+0361|Standalone Master Files / Packages|Circuit Salvage Website
+0362|Standalone Master Files / Packages|Luna Grace Boutique Website
+0363|Standalone Master Files / Packages|Iron Oak Outfitters Website
+0364|Standalone Master Files / Packages|Tha Faded Kid Website
+0365|Standalone Master Files / Packages|Tucson Hair Website
+0366|Standalone Master Files / Packages|TTown Data Transfer Services Website/System
+0367|Standalone Master Files / Packages|Two-Player Chess Web App
+0368|Standalone Master Files / Packages|Anthony HQ
+0369|Standalone Master Files / Packages|AI Receptionist System
+0370|Standalone Master Files / Packages|Local Automation Agency Operating System
+0371|Standalone Master Files / Packages|SSAG AI Communications Layer
+0372|Standalone Master Files / Packages|SSAG Digital Marketing Automation Stack
+0373|Standalone Master Files / Packages|SSAG Lead Generation / Acquisition System
+0374|Standalone Master Files / Packages|Airbnb / Property Operator Dashboard
+0375|Standalone Master Files / Packages|Turo-Style Vehicle Operator System
+0376|Standalone Master Files / Packages|SSAG Legacy / Continuity Portal and Binder System
+0377|Standalone Master Files / Packages|Business Legacy & Continuity Planning Service Package
+0378|Standalone Master Files / Packages|Cybersecurity Insurance-Broker Referral Workflow
+0379|Standalone Master Files / Packages|Mobile Device Protection Customer Onboarding Flow
+0380|Standalone Master Files / Packages|Sentinel Zero Assessment Intake System
+0381|Standalone Master Files / Packages|Sentinel Zero Client Findings / Proposal Template System
+0382|Standalone Master Files / Packages|Outbound Call Dashboard Specification
+0383|Standalone Master Files / Packages|CRM Field Dictionary & Pipeline Stage System
+0384|Standalone Master Files / Packages|Daily Operator Checklist System
+0385|Standalone Master Files / Packages|Weekly Management Review System
+0386|Standalone Master Files / Packages|Deployment Checklist System
+0387|Standalone Master Files / Packages|Arizona Healthcare Call-List / Lead Operations Workbook
+0388|Standalone Master Files / Packages|Operator Daily Execution Sheet
+0389|Standalone Master Files / Packages|Assessment Report & Client Proposal Package
