@@ -1,0 +1,100 @@
+0001|Businesses / Business Models / Ventures|SSAG — Strategic Systems Advisory Group
+0002|Businesses / Business Models / Ventures|Sentinel Zero LLC
+0003|Businesses / Business Models / Ventures|AscendEdge Media Group
+0004|Businesses / Business Models / Ventures|Employee Call Dispatch Platform
+0005|Businesses / Business Models / Ventures|QuoteForge Local
+0006|Businesses / Business Models / Ventures|StayPilot
+0007|Businesses / Business Models / Ventures|SignalCurrent
+0008|Businesses / Business Models / Ventures|Quantum Gadgetry
+0009|Businesses / Business Models / Ventures|Circuit Salvage
+0010|Businesses / Business Models / Ventures|Up Up and Away
+0011|Businesses / Business Models / Ventures|Luna Grace Boutique
+0012|Businesses / Business Models / Ventures|Iron Oak Outfitters
+0013|Businesses / Business Models / Ventures|Tha Faded Kid
+0014|Businesses / Business Models / Ventures|TTown Data Transfer Services
+0015|Businesses / Business Models / Ventures|Signature Service Cleaning
+0016|Businesses / Business Models / Ventures|Moving Buddies
+0017|Businesses / Business Models / Ventures|Retail Arbitrage Business / Retail Arbitrage Command Center
+0018|Businesses / Business Models / Ventures|Local Arbitrage Scanner
+0019|Businesses / Business Models / Ventures|Coupon Optimization System
+0020|Businesses / Business Models / Ventures|Ad Revenue / Traffic Website Business
+0021|Businesses / Business Models / Ventures|Lead Generation Company / SSAG Lead Generation Systems
+0022|Businesses / Business Models / Ventures|AI Calling Service
+0023|Businesses / Business Models / Ventures|AI Receptionist Business
+0024|Businesses / Business Models / Ventures|Local Automation Agency
+0025|Businesses / Business Models / Ventures|SSAG AI Communications / Outbound Business
+0026|Businesses / Business Models / Ventures|SSAG Automation & AI Agents Business
+0027|Businesses / Business Models / Ventures|Airbnb Co-Hosting Business
+0028|Businesses / Business Models / Ventures|Rental Arbitrage / Airbnb Without Purchasing Property
+0029|Businesses / Business Models / Ventures|Property Management Company
+0030|Businesses / Business Models / Ventures|Turo-Style Car Rental Business Without Purchasing Vehicles
+0031|Businesses / Business Models / Ventures|Pre-Foreclosure Acquisition Venture
+0032|Businesses / Business Models / Ventures|Real Estate Holding / Acquisition Company
+0033|Businesses / Business Models / Ventures|Long-Term Care / Care Home Operating Company
+0034|Businesses / Business Models / Ventures|Hospitality Management Business
+0035|Businesses / Business Models / Ventures|Hospitality App / Platform
+0036|Businesses / Business Models / Ventures|Notary Public Turnkey Business
+0037|Businesses / Business Models / Ventures|DMV Third-Party Services Business
+0038|Businesses / Business Models / Ventures|Wedding Minister / Wedding Officiant Business
+0039|Businesses / Business Models / Ventures|Airbnb Co-Host Turnkey Business
+0040|Businesses / Business Models / Ventures|Pressure-Washing Turnkey Business
+0041|Businesses / Business Models / Ventures|Auto-Detailing Turnkey Business
+0042|Businesses / Business Models / Ventures|Automation Agency Turnkey Business
+0043|Businesses / Business Models / Ventures|E-Commerce Turnkey Business
+0044|Businesses / Business Models / Ventures|AI Services Turnkey Business
+0045|Businesses / Business Models / Ventures|Hospitality Turnkey Business
+0046|Businesses / Business Models / Ventures|Rental/Arbitrage Turnkey Business
+0047|Businesses / Business Models / Ventures|SSAG Digital Marketing & Advertising Division
+0048|Businesses / Business Models / Ventures|SSAG Acquisition / Lead Systems Division
+0049|Businesses / Business Models / Ventures|SSAG Business Operating Systems Division
+0050|Businesses / Business Models / Ventures|SSAG Turnkey Business Infrastructure
+0051|Businesses / Business Models / Ventures|SSAG Marketplace
+0052|Businesses / Business Models / Ventures|SSAG Printing / Turnkey Office Services
+0053|Businesses / Business Models / Ventures|SSAG Legacy Infrastructure
+0054|Businesses / Business Models / Ventures|Money Mindset Vault
+0055|Businesses / Business Models / Ventures|Passive Hustle TV
+0056|Businesses / Business Models / Ventures|Clever Living Lab
+0057|Businesses / Business Models / Ventures|Street-Cleanup Nonprofit
+0058|Businesses / Business Models / Ventures|Fintech / Payments / Wallet Business
+0059|Businesses / Business Models / Ventures|SSAG Digital Currency / Token Concept
+0060|Businesses / Business Models / Ventures|Insurance-Broker Cybersecurity Referral Channel
+0061|Top-Level Controlled Enterprise Assets (00–44)|00 Ultimate Start Here
+0062|Top-Level Controlled Enterprise Assets (00–44)|01 Master Enterprise Operating System
+0063|Top-Level Controlled Enterprise Assets (00–44)|02 Sentinel Zero Healthcare Revenue Playbook
+0064|Top-Level Controlled Enterprise Assets (00–44)|03 Sentinel Zero Client Delivery Kit
+0065|Top-Level Controlled Enterprise Assets (00–44)|04 Stress Test / QA / Governance
+0066|Top-Level Controlled Enterprise Assets (00–44)|05 Arizona Healthcare Lead Operations
+0067|Top-Level Controlled Enterprise Assets (00–44)|06 Deployment / Technology / Compliance Controls
+0068|Top-Level Controlled Enterprise Assets (00–44)|07 Live Activation Command Center (XLSX)
+0069|Top-Level Controlled Enterprise Assets (00–44)|08 14-Day Live Activation Order
+0070|Top-Level Controlled Enterprise Assets (00–44)|09 Day One Verified Call Pack
+0071|Top-Level Controlled Enterprise Assets (00–44)|10 Sales-to-Cash Forms
+0072|Top-Level Controlled Enterprise Assets (00–44)|11 Contract / Compliance Review Pack
+0073|Top-Level Controlled Enterprise Assets (00–44)|12 Organization Architecture / Departments
+0074|Top-Level Controlled Enterprise Assets (00–44)|13 Position Manuals — Volume 1
+0075|Top-Level Controlled Enterprise Assets (00–44)|14 Position Manuals — Volume 2
+0076|Top-Level Controlled Enterprise Assets (00–44)|15 Position Manuals — Volume 3
+0077|Top-Level Controlled Enterprise Assets (00–44)|16 Employee and Office Handbook
+0078|Top-Level Controlled Enterprise Assets (00–44)|17 Manager / Training / Performance System
+0079|Top-Level Controlled Enterprise Assets (00–44)|18 Department SOP Master Library
+0080|Top-Level Controlled Enterprise Assets (00–44)|19 Safety / Emergency / Continuity Plan
+0081|Top-Level Controlled Enterprise Assets (00–44)|20 Forms / Logs / Checklists / Handoff Pack
+0082|Top-Level Controlled Enterprise Assets (00–44)|21 Staffing / Hiring / Scaling Plan
+0083|Top-Level Controlled Enterprise Assets (00–44)|22 People and Office Command Center (XLSX)
+0084|Top-Level Controlled Enterprise Assets (00–44)|23 Department Workstation Master Library
+0085|Top-Level Controlled Enterprise Assets (00–44)|24 Individual Role Starter and Certification Master Library
+0086|Top-Level Controlled Enterprise Assets (00–44)|25 Executive RACI, Decision Rights and Approval Matrix
+0087|Top-Level Controlled Enterprise Assets (00–44)|26 Meeting, Communication and Handoff Operating System
+0088|Top-Level Controlled Enterprise Assets (00–44)|27 Records, File Architecture and Retention Schedule
+0089|Top-Level Controlled Enterprise Assets (00–44)|28 Internal Audit and Control Testing Program
+0090|Top-Level Controlled Enterprise Assets (00–44)|29 Scenario Drills and Completed Sample Records
+0091|Top-Level Controlled Enterprise Assets (00–44)|30 Department KPI, Capacity and Hiring Trigger System
+0092|Top-Level Controlled Enterprise Assets (00–44)|31 AI and Knowledge Operations Manual
+0093|Top-Level Controlled Enterprise Assets (00–44)|32 Internal Staff Portal Guide
+0094|Top-Level Controlled Enterprise Assets (00–44)|33 People and Office Command Center v2
+0095|Top-Level Controlled Enterprise Assets (00–44)|34 Operationalization V2 Deployment Order
+0096|Top-Level Controlled Enterprise Assets (00–44)|35 Physical Office Setup and Workplace Standards
+0097|Top-Level Controlled Enterprise Assets (00–44)|36 Manager One-on-One, Coaching and Performance Toolkit
+0098|Top-Level Controlled Enterprise Assets (00–44)|37 Printable Office Wall and Desk Quick Reference Pack
+0099|Top-Level Controlled Enterprise Assets (00–44)|38 Phase 3 Start Here
+0100|Top-Level Controlled Enterprise Assets (00–44)|39 Account Control and Connection Manual
