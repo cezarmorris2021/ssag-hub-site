@@ -1,120 +1,120 @@
 {
-  "checkedAt": "2026-09-25T17:39:44.211Z",
+  "checkedAt": "2026-09-26T16:51:16.332Z",
   "total": 21,
-  "healthy": 17,
-  "unhealthy": 4,
+  "healthy": 16,
+  "unhealthy": 5,
   "systems": [
     {
       "name": "Master Owner Dashboard",
       "url": "https://cezarmorris2021.github.io/ssag-hub-site/owner-master-dashboard/",
       "ok": true,
       "status": 200,
-      "ms": 173
+      "ms": 345
     },
     {
       "name": "Arizona Website Opportunity Engine",
       "url": "https://cezarmorris2021.github.io/ssag-hub-site/arizona-website-opportunity-engine/",
       "ok": true,
       "status": 200,
-      "ms": 102
+      "ms": 261
     },
     {
       "name": "Revenue-Ready Make-Good Suite",
       "url": "https://cezarmorris2021.github.io/ssag-hub-site/revenue-ready-make-good/",
       "ok": true,
       "status": 200,
-      "ms": 96
+      "ms": 243
     },
     {
       "name": "SSAG Owner Launchpad",
       "url": "https://ssag-owner-launchpad.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 333
+      "ms": 182
     },
     {
       "name": "SSAG Platform Public",
       "url": "https://ssag-platform-public.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 191
+      "ms": 268
     },
     {
       "name": "SSAG Command Center",
       "url": "https://ssag-command-center.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 164
+      "ms": 235
     },
     {
       "name": "SSAG Command Center Elite",
       "url": "https://ssag-command-center-elite.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 321
+      "ms": 220
     },
     {
       "name": "Sentinel Zero Public",
       "url": "https://cezarmorris2021.github.io/Sentinel-Zero-LLC/",
       "ok": true,
       "status": 200,
-      "ms": 102
+      "ms": 243
     },
     {
       "name": "Sentinel Zero Enterprise",
       "url": "https://sentinelzeroenterprise2026-08-21.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 169
+      "ms": 194
     },
     {
       "name": "Cyber Exposure Score",
       "url": "https://sentinel-zero-cyber-exposure-score.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 218
+      "ms": 205
     },
     {
       "name": "Sentinel Zero Sales Coach",
       "url": "https://sentinel-zero-sales-coach.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 192
+      "ms": 240
     },
     {
       "name": "Sentinel Zero Proposal Builder",
       "url": "https://sentinel-zero-proposal-builder.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 319
+      "ms": 100
     },
     {
       "name": "Sentinel Zero Review Intake",
       "url": "https://sentinel-zero-review-intake.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 322
+      "ms": 200
     },
     {
       "name": "Savings Command Center",
       "url": "https://savings-command-center.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 204
+      "ms": 269
     },
     {
       "name": "Retail Arbitrage Command Center",
       "url": "https://retail-arbitrage-command-center.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 174
+      "ms": 261
     },
     {
       "name": "Employee Call Dispatch",
       "url": "https://datatranferservice-hue.github.io/employee-call-dispatch/",
       "ok": true,
       "status": 200,
-      "ms": 127
+      "ms": 284
     },
     {
       "name": "CallFlow Health",
@@ -129,22 +129,23 @@
       "url": "https://sentinel-zero-ai-outbound.onrender.com/health",
       "ok": false,
       "status": null,
-      "ms": 20001,
+      "ms": 20000,
       "error": "The operation was aborted due to timeout"
     },
     {
       "name": "Two-Player Chess Health",
       "url": "https://cezar-two-player-chess.onrender.com/health",
-      "ok": true,
-      "status": 200,
-      "ms": 12299
+      "ok": false,
+      "status": null,
+      "ms": 20001,
+      "error": "The operation was aborted due to timeout"
     },
     {
       "name": "SSAG Command Center Backend Health",
       "url": "https://ssag-command-center-backend.onrender.com/api/health",
       "ok": false,
       "status": null,
-      "ms": 20000,
+      "ms": 20001,
       "error": "The operation was aborted due to timeout"
     },
     {
