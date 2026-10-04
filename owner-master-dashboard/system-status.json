@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-03T16:54:44.044Z",
+  "checkedAt": "2026-10-04T17:13:51.479Z",
   "total": 21,
   "healthy": 16,
   "unhealthy": 5,
@@ -9,112 +9,112 @@
       "url": "https://cezarmorris2021.github.io/ssag-hub-site/owner-master-dashboard/",
       "ok": true,
       "status": 200,
-      "ms": 193
+      "ms": 215
     },
     {
       "name": "Arizona Website Opportunity Engine",
       "url": "https://cezarmorris2021.github.io/ssag-hub-site/arizona-website-opportunity-engine/",
       "ok": true,
       "status": 200,
-      "ms": 378
+      "ms": 257
     },
     {
       "name": "Revenue-Ready Make-Good Suite",
       "url": "https://cezarmorris2021.github.io/ssag-hub-site/revenue-ready-make-good/",
       "ok": true,
       "status": 200,
-      "ms": 112
+      "ms": 107
     },
     {
       "name": "SSAG Owner Launchpad",
       "url": "https://ssag-owner-launchpad.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 726
+      "ms": 321
     },
     {
       "name": "SSAG Platform Public",
       "url": "https://ssag-platform-public.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 147
+      "ms": 255
     },
     {
       "name": "SSAG Command Center",
       "url": "https://ssag-command-center.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 165
+      "ms": 280
     },
     {
       "name": "SSAG Command Center Elite",
       "url": "https://ssag-command-center-elite.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 321
+      "ms": 304
     },
     {
       "name": "Sentinel Zero Public",
       "url": "https://cezarmorris2021.github.io/Sentinel-Zero-LLC/",
       "ok": true,
       "status": 200,
-      "ms": 121
+      "ms": 69
     },
     {
       "name": "Sentinel Zero Enterprise",
       "url": "https://sentinelzeroenterprise2026-08-21.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 45
+      "ms": 276
     },
     {
       "name": "Cyber Exposure Score",
       "url": "https://sentinel-zero-cyber-exposure-score.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 226
+      "ms": 262
     },
     {
       "name": "Sentinel Zero Sales Coach",
       "url": "https://sentinel-zero-sales-coach.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 348
+      "ms": 292
     },
     {
       "name": "Sentinel Zero Proposal Builder",
       "url": "https://sentinel-zero-proposal-builder.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 173
+      "ms": 306
     },
     {
       "name": "Sentinel Zero Review Intake",
       "url": "https://sentinel-zero-review-intake.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 164
+      "ms": 266
     },
     {
       "name": "Savings Command Center",
       "url": "https://savings-command-center.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 228
+      "ms": 264
     },
     {
       "name": "Retail Arbitrage Command Center",
       "url": "https://retail-arbitrage-command-center.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 309
+      "ms": 279
     },
     {
       "name": "Employee Call Dispatch",
       "url": "https://datatranferservice-hue.github.io/employee-call-dispatch/",
       "ok": true,
       "status": 200,
-      "ms": 125
+      "ms": 108
     },
     {
       "name": "CallFlow Health",
@@ -129,7 +129,7 @@
       "url": "https://sentinel-zero-ai-outbound.onrender.com/health",
       "ok": false,
       "status": null,
-      "ms": 20001,
+      "ms": 20000,
       "error": "The operation was aborted due to timeout"
     },
     {
@@ -137,7 +137,7 @@
       "url": "https://cezar-two-player-chess.onrender.com/health",
       "ok": false,
       "status": null,
-      "ms": 20002,
+      "ms": 20000,
       "error": "The operation was aborted due to timeout"
     },
     {
@@ -153,7 +153,7 @@
       "url": "https://ssag-backend.onrender.com/api/health",
       "ok": false,
       "status": null,
-      "ms": 20000,
+      "ms": 20001,
       "error": "The operation was aborted due to timeout"
     }
   ]
