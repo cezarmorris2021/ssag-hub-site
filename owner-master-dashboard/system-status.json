@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-06T18:43:59.402Z",
+  "checkedAt": "2026-10-07T19:10:22.214Z",
   "total": 21,
   "healthy": 16,
   "unhealthy": 5,
@@ -9,112 +9,112 @@
       "url": "https://cezarmorris2021.github.io/ssag-hub-site/owner-master-dashboard/",
       "ok": true,
       "status": 200,
-      "ms": 196
+      "ms": 174
     },
     {
       "name": "Arizona Website Opportunity Engine",
       "url": "https://cezarmorris2021.github.io/ssag-hub-site/arizona-website-opportunity-engine/",
       "ok": true,
       "status": 200,
-      "ms": 120
+      "ms": 65
     },
     {
       "name": "Revenue-Ready Make-Good Suite",
       "url": "https://cezarmorris2021.github.io/ssag-hub-site/revenue-ready-make-good/",
       "ok": true,
       "status": 200,
-      "ms": 49
+      "ms": 40
     },
     {
       "name": "SSAG Owner Launchpad",
       "url": "https://ssag-owner-launchpad.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 308
+      "ms": 213
     },
     {
       "name": "SSAG Platform Public",
       "url": "https://ssag-platform-public.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 339
+      "ms": 121
     },
     {
       "name": "SSAG Command Center",
       "url": "https://ssag-command-center.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 282
+      "ms": 70
     },
     {
       "name": "SSAG Command Center Elite",
       "url": "https://ssag-command-center-elite.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 759
+      "ms": 121
     },
     {
       "name": "Sentinel Zero Public",
       "url": "https://cezarmorris2021.github.io/Sentinel-Zero-LLC/",
       "ok": true,
       "status": 200,
-      "ms": 68
+      "ms": 47
     },
     {
       "name": "Sentinel Zero Enterprise",
       "url": "https://sentinelzeroenterprise2026-08-21.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 213
+      "ms": 145
     },
     {
       "name": "Cyber Exposure Score",
       "url": "https://sentinel-zero-cyber-exposure-score.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 202
+      "ms": 105
     },
     {
       "name": "Sentinel Zero Sales Coach",
       "url": "https://sentinel-zero-sales-coach.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 248
+      "ms": 75
     },
     {
       "name": "Sentinel Zero Proposal Builder",
       "url": "https://sentinel-zero-proposal-builder.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 271
+      "ms": 88
     },
     {
       "name": "Sentinel Zero Review Intake",
       "url": "https://sentinel-zero-review-intake.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 254
+      "ms": 72
     },
     {
       "name": "Savings Command Center",
       "url": "https://savings-command-center.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 254
+      "ms": 228
     },
     {
       "name": "Retail Arbitrage Command Center",
       "url": "https://retail-arbitrage-command-center.vercel.app",
       "ok": true,
       "status": 200,
-      "ms": 219
+      "ms": 109
     },
     {
       "name": "Employee Call Dispatch",
       "url": "https://datatranferservice-hue.github.io/employee-call-dispatch/",
       "ok": true,
       "status": 200,
-      "ms": 272
+      "ms": 184
     },
     {
       "name": "CallFlow Health",
@@ -153,7 +153,7 @@
       "url": "https://ssag-backend.onrender.com/api/health",
       "ok": false,
       "status": null,
-      "ms": 20001,
+      "ms": 20000,
       "error": "The operation was aborted due to timeout"
     }
   ]
