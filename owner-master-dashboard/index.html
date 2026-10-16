@@ -140,5 +140,6 @@ fetch('./current-platform-state.json',{cache:'no-store'}).then(r=>r.json()).then
     <div class="card"><span class="badge warn">PAYMENTS</span><h3>Stripe connection observed: ${esc(s.payments.mode.toUpperCase())} mode</h3><p>Live checkout is not marked verified until an authorized live account is connected.</p></div>`;
 }).catch(()=>{currentState.innerHTML='<div class="card"><p>Current platform snapshot unavailable.</p></div>'});
 </script>
+<script src="./live-repositories.js" defer></script>
 </body>
 </html>
