@@ -24,8 +24,8 @@
   <section class="metrics">
     <div class="metric"><strong>389</strong><span>Frozen recovered baseline</span></div>
     <div class="metric"><strong>28</strong><span>Recovered GitHub repos</span></div>
-    <div class="metric"><strong id="vercelCount">16</strong><span>Current Vercel projects</span></div>
-    <div class="metric"><strong id="renderCount">5</strong><span>Current Render web services</span></div>
+    <div class="metric"><strong id="vercelCount">16</strong><span>Vercel projects in Sept. 16 audit</span></div>
+    <div class="metric"><strong id="renderCount">5</strong><span>Render web services in Sept. 16 audit</span></div>
     <div class="metric"><strong id="shown">0</strong><span>Assets shown</span></div>
   </section>
 
@@ -45,8 +45,8 @@
   </section>
 
   <section class="panel" id="currentStatePanel">
-    <div class="eyebrow">CURRENT PLATFORM STATE</div>
-    <h2>Live inventory above the frozen 389 baseline</h2>
+    <div class="eyebrow">LAST RECORDED PLATFORM AUDIT • HISTORICAL SNAPSHOT</div>
+    <h2>Platform snapshot dated September 16, 2026 — not live</h2><p class="muted">This section is a recorded audit and may be outdated. For fresh source records, use Live GitHub Inventory below; for website status, check the timestamp on the health panel.</p>
     <div id="currentState" class="grid"><div class="card"><p>Loading current platform inventory…</p></div></div>
   </section>
 
@@ -138,7 +138,7 @@ fetch('./current-platform-state.json',{cache:'no-store'}).then(r=>r.json()).then
     <div class="card"><span class="badge warn">HEALTH CONFIG</span><h3>${s.render.platformHealthCheckPathsConfigured} / ${s.render.webServiceCount} Render platform health paths configured</h3><p>Code-level health endpoints exist on several services; platform monitoring still needs to be connected.</p></div>
     <div class="card"><span class="badge bad">DATABASE WATCH</span><h3>Staging DB recorded expiration: ${esc(expiry)}</h3><p>${esc(db?db.warning:'No database record found.')}</p></div>
     <div class="card"><span class="badge warn">PAYMENTS</span><h3>Stripe connection observed: ${esc(s.payments.mode.toUpperCase())} mode</h3><p>Live checkout is not marked verified until an authorized live account is connected.</p></div>`;
-}).catch(()=>{currentState.innerHTML='<div class="card"><p>Current platform snapshot unavailable.</p></div>'});
+}).catch(()=>{currentState.innerHTML='<div class="card"><p>Recorded platform audit unavailable.</p></div>'});
 </script>
 <script src="./live-repositories.js" defer></script>
 </body>
