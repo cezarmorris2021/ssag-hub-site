@@ -23,7 +23,7 @@
 
   <section class="metrics">
     <div class="metric"><strong>389</strong><span>Frozen recovered baseline</span></div>
-    <div class="metric"><strong>28</strong><span>Recovered GitHub repos</span></div>
+    <div class="metric"><strong>28</strong><span>Repositories in recovered baseline (historical)</span></div>
     <div class="metric"><strong id="vercelCount">16</strong><span>Vercel projects in Sept. 16 audit</span></div>
     <div class="metric"><strong id="renderCount">5</strong><span>Render web services in Sept. 16 audit</span></div>
     <div class="metric"><strong id="shown">0</strong><span>Assets shown</span></div>
@@ -39,9 +39,9 @@
 
   <section class="panel" id="healthPanel">
     <div class="eyebrow">AUTOMATED SYSTEM HEALTH</div>
-    <h2>Working / failing / last checked</h2>
+    <h2>Page identity, endpoint reachability and last checked</h2>
     <div class="metrics"><div class="metric"><strong id="healthGood">—</strong><span>Healthy</span></div><div class="metric"><strong id="healthBad">—</strong><span>Needs attention</span></div><div class="metric"><strong id="healthChecked">Pending</strong><span>Last automated check</span></div></div>
-    <div id="healthList" class="muted">First status snapshot pending. The daily GitHub health job has been installed and will populate this section automatically.</div>
+    <p id="healthFreshness" class="muted" role="status">Loading latest stored snapshot…</p><div id="healthList" class="muted">Health snapshot not loaded. A stored HTTP check does not demonstrate that all app workflows function.</div>
   </section>
 
   <section class="panel" id="currentStatePanel">
@@ -123,11 +123,16 @@ function renderLinks(){
   links.innerHTML=arr.map(x=>`<div class="card"><span class="badge ready">LINKED</span><h3>${esc(x[0])}</h3><p>${esc(x[2])}</p><a class="btn" target="_blank" rel="noopener" href="${x[1]}">Open</a></div>`).join('');
 }
 
-fetch('./system-status.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json()}).then(s=>{
+fetch('./system-status.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(s=>{
+  const t=new Date(s.checkedAt),age=(Date.now()-t.getTime())/3600000;
+  const stale=!Number.isFinite(age)||age>24||age< -0.25;
   healthGood.textContent=s.healthy; healthBad.textContent=s.unhealthy;
-  healthChecked.textContent=new Date(s.checkedAt).toLocaleString();
-  healthList.innerHTML=s.systems.map(x=>`<div class="health"><div><strong>${esc(x.name)}</strong><br><small>${esc(x.url)}</small></div><div class="${x.ok?'ok':'fail'}"><b>${x.ok?'WORKING':'CHECK'}</b><br><small>${x.status||'error'}</small></div><div class="latency"><small>${x.ms?x.ms+' ms':'—'}</small></div></div>`).join('');
-}).catch(()=>{});
+  healthChecked.textContent=Number.isFinite(age)?t.toLocaleString('en-US',{timeZone:'America/Phoenix',dateStyle:'medium',timeStyle:'short'})+' AZ':'Unknown';
+  healthFreshness.textContent=(stale?'STALE / INVALID — verify before use. ':'Stored snapshot only — not a live uptime guarantee. ')+(Number.isFinite(age)?age.toFixed(1)+' hours old. ':'')+'An HTTP 200 with the wrong app title now fails the health check; backend timeouts do not prove an entire application is offline.';
+  healthFreshness.style.color=stale?'var(--red)':'var(--muted)';
+  const label=x=>x.ok?'PASS':x.classification==='endpoint_timeout'?'TIMEOUT':x.classification==='content_mismatch'?'WRONG PAGE':x.classification==='inventory_unavailable'?'REPO API':x.classification==='http_error'?'HTTP ERROR':'CHECK';
+  healthList.innerHTML=(s.systems||[]).map(x=>`<div class="health"><div><strong>${esc(x.name)}</strong><br><small>${esc(x.url)}</small>${x.error?'<br><small>'+esc(x.error)+'</small>':''}</div><div class="${x.ok?'ok':'fail'}"><b>${label(x)}</b><br><small>${esc(x.status||'—')}</small></div><div class="latency"><small>${x.ms?x.ms+' ms':'—'}</small></div></div>`).join('');
+}).catch(e=>{healthFreshness.textContent='Health snapshot unavailable: '+String(e.message||e)+'. No fresh health claims can be made.';healthFreshness.style.color='var(--red)';});
 
 fetch('./current-platform-state.json',{cache:'no-store'}).then(r=>r.json()).then(s=>{
   vercelCount.textContent=s.vercel.projectCount; renderCount.textContent=s.render.webServiceCount;
