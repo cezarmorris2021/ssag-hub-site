@@ -51,37 +51,39 @@ jobs:
           ];
 
           async function check([name,url,expectedTitle]) {
-            const started = Date.now();
-            const kind = expectedTitle === '@github-repositories' ? 'inventory' : (url.includes('.onrender.com/') ? 'backend' : 'website');
-            const timeout = kind === 'backend' ? 35000 : 20000;
-            try {
-              const res = await fetch(url, {
-                redirect: 'follow',
-                signal: AbortSignal.timeout(timeout),
-                headers: {'user-agent':'SSAG-Owner-Health/2.0','accept':kind==='inventory'?'application/vnd.github+json':'text/html,application/json,*/*'}
-              });
-              const result = {name,url,kind,ok:res.status>=200&&res.status<400,status:res.status,ms:Date.now()-started,classification:'healthy'};
-              if(!result.ok) { result.classification='http_error'; return result; }
-              if(expectedTitle === '@github-repositories') {
-                const data = await res.json();
-                if(!Array.isArray(data) || !data.some(repo=>repo.full_name && !repo.private)) {
-                  result.ok=false;result.classification='inventory_unavailable';
-                  result.error='GitHub response did not include a usable public repository list';
+            const started=Date.now();
+            const kind=expectedTitle==='@github-repositories'?'inventory':(url.includes('.onrender.com/')?'backend':'website');
+            const maxAttempts=kind==='backend'?3:1, pause=12000;
+            for(let attempt=1;attempt<=maxAttempts;attempt++){
+              try{
+                const res=await fetch(url,{redirect:'follow',signal:AbortSignal.timeout(kind==='backend'?35000:20000),
+                  headers:{'user-agent':'SSAG-Owner-Health/2.1','accept':kind==='inventory'?'application/vnd.github+json':'text/html,application/json,*/*'}});
+                if(kind==='backend' && [502,503,504].includes(res.status) && attempt<maxAttempts){
+                  await new Promise(resolve=>setTimeout(resolve,pause)); continue;
                 }
-              } else if(expectedTitle) {
-                const html = await res.text();
-                const observed = (html.match(/<title[^>]*>([^<]*)<\/title>/i)||[])[1]?.trim()||'Missing title';
-                result.pageTitle=observed;
-                if(observed !== expectedTitle) {
-                  result.ok=false;result.classification='content_mismatch';
-                  result.error='Expected page title "'+expectedTitle+'"; received "'+observed+'"';
+                const result={name,url,kind,ok:res.status>=200&&res.status<400,status:res.status,ms:Date.now()-started,attempts:attempt,classification:'healthy'};
+                if(!result.ok){result.classification=kind==='backend'?'backend_http_error':'http_error';return result;}
+                if(expectedTitle==='@github-repositories'){
+                  const data=await res.json();
+                  if(!Array.isArray(data)||!data.some(repo=>repo.full_name&&!repo.private)){
+                    result.ok=false;result.classification='inventory_unavailable';
+                    result.error='GitHub did not return usable public repository records';
+                  }
+                }else if(expectedTitle){
+                  const html=await res.text(),title=(html.match(/<title[^>]*>([^<]*)<\/title>/i)||[])[1]?.trim()||'Missing title';
+                  result.pageTitle=title;
+                  if(title!==expectedTitle){
+                    result.ok=false;result.classification='content_mismatch';
+                    result.error='Expected page title "'+expectedTitle+'"; received "'+title+'"';
+                  }
                 }
+                return result;
+              }catch(e){
+                const message=String(e.message||e).slice(0,180);
+                if(kind==='backend' && attempt<maxAttempts){await new Promise(resolve=>setTimeout(resolve,pause));continue;}
+                return {name,url,kind,ok:false,status:null,ms:Date.now()-started,attempts:attempt,
+                  classification:/timeout|aborted/i.test(message)?'endpoint_timeout':'network_error',error:message};
               }
-              return result;
-            } catch (e) {
-              const message=String(e.message||e).slice(0,180);
-              return {name,url,kind,ok:false,status:null,ms:Date.now()-started,
-                classification:/timeout|aborted/i.test(message)?'endpoint_timeout':'network_error',error:message};
             }
           }
 
@@ -94,6 +96,7 @@ jobs:
               unhealthy: results.filter(x=>!x.ok).length,
               confirmedPageProblems: results.filter(x=>!x.ok && x.kind==='website' && ['content_mismatch','http_error'].includes(x.classification)).length,
               backendTimeouts: results.filter(x=>!x.ok && x.kind==='backend' && x.classification==='endpoint_timeout').length,
+              backendHttpErrors: results.filter(x=>!x.ok && x.kind==='backend' && x.classification==='backend_http_error').length,
               systems: results
             };
             fs.writeFileSync('owner-master-dashboard/system-status.json', JSON.stringify(out,null,2)+'\n');
