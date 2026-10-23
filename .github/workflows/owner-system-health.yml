@@ -3,7 +3,10 @@ name: Owner System Health
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 13 * * *'
+    - cron: '0 1,13 * * *'
+  push:
+    paths:
+      - '.github/workflows/owner-system-health.yml'
 
 permissions:
   contents: write
@@ -21,10 +24,11 @@ jobs:
           node <<'NODE'
           const fs = require('fs');
           const systems = [
-            ['Master Owner Dashboard','https://cezarmorris2021.github.io/ssag-hub-site/owner-master-dashboard/'],
+            ['Master Owner Dashboard','https://cezarmorris2021.github.io/ssag-hub-site/owner-master-dashboard/','Cezar Master Build Dashboard'],
             ['Arizona Website Opportunity Engine','https://cezarmorris2021.github.io/ssag-hub-site/arizona-website-opportunity-engine/'],
             ['Revenue-Ready Make-Good Suite','https://cezarmorris2021.github.io/ssag-hub-site/revenue-ready-make-good/'],
             ['SSAG Owner Launchpad','https://ssag-owner-launchpad.vercel.app'],
+            ['Master Build Launchpad','https://cezar-master-build-launchpad.vercel.app/','Cezar Master Build Launchpad'],
             ['SSAG Platform Public','https://ssag-platform-public.vercel.app'],
             ['SSAG Command Center','https://ssag-command-center.vercel.app'],
             ['SSAG Command Center Elite','https://ssag-command-center-elite.vercel.app'],
@@ -34,34 +38,62 @@ jobs:
             ['Sentinel Zero Sales Coach','https://sentinel-zero-sales-coach.vercel.app'],
             ['Sentinel Zero Proposal Builder','https://sentinel-zero-proposal-builder.vercel.app'],
             ['Sentinel Zero Review Intake','https://sentinel-zero-review-intake.vercel.app'],
-            ['Savings Command Center','https://savings-command-center.vercel.app'],
-            ['Retail Arbitrage Command Center','https://retail-arbitrage-command-center.vercel.app'],
+            ['Savings Command Center','https://savings-command-center.vercel.app/','Savings Command Center'],
+            ['Retail Arbitrage Command Center','https://retail-arbitrage-command-center.vercel.app/','Local Arbitrage Scanner'],
+            ['Revenue-Ready Make-Up Suite','https://revenue-ready-makeup-suite.vercel.app/','Revenue Ready Make-Up Suite'],
             ['Employee Call Dispatch','https://datatranferservice-hue.github.io/employee-call-dispatch/'],
             ['CallFlow Health','https://callflow-command.onrender.com/api/health'],
             ['Sentinel Zero AI Outbound Health','https://sentinel-zero-ai-outbound.onrender.com/health'],
             ['Two-Player Chess Health','https://cezar-two-player-chess.onrender.com/health'],
             ['SSAG Command Center Backend Health','https://ssag-command-center-backend.onrender.com/api/health'],
-            ['SSAG Backend Health','https://ssag-backend.onrender.com/api/health']
+            ['SSAG Backend Health','https://ssag-backend.onrender.com/api/health'],
+            ['GitHub Public Repository API','https://api.github.com/users/cezarmorris2021/repos?per_page=1&type=public','@github-repositories']
           ];
 
-          async function check([name,url]) {
+          async function check([name,url,expectedTitle]) {
             const started = Date.now();
+            const kind = expectedTitle === '@github-repositories' ? 'inventory' : (url.includes('.onrender.com/') ? 'backend' : 'website');
+            const timeout = kind === 'backend' ? 35000 : 20000;
             try {
-              const res = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(20000), headers: {'user-agent':'SSAG-Owner-Health/1.0'} });
-              return { name, url, ok: res.status >= 200 && res.status < 400, status: res.status, ms: Date.now()-started };
+              const res = await fetch(url, {
+                redirect: 'follow',
+                signal: AbortSignal.timeout(timeout),
+                headers: {'user-agent':'SSAG-Owner-Health/2.0','accept':kind==='inventory'?'application/vnd.github+json':'text/html,application/json,*/*'}
+              });
+              const result = {name,url,kind,ok:res.status>=200&&res.status<400,status:res.status,ms:Date.now()-started,classification:'healthy'};
+              if(!result.ok) { result.classification='http_error'; return result; }
+              if(expectedTitle === '@github-repositories') {
+                const data = await res.json();
+                if(!Array.isArray(data) || !data.some(repo=>repo.full_name && !repo.private)) {
+                  result.ok=false;result.classification='inventory_unavailable';
+                  result.error='GitHub response did not include a usable public repository list';
+                }
+              } else if(expectedTitle) {
+                const html = await res.text();
+                const observed = (html.match(/<title[^>]*>([^<]*)<\/title>/i)||[])[1]?.trim()||'Missing title';
+                result.pageTitle=observed;
+                if(observed !== expectedTitle) {
+                  result.ok=false;result.classification='content_mismatch';
+                  result.error='Expected page title "'+expectedTitle+'"; received "'+observed+'"';
+                }
+              }
+              return result;
             } catch (e) {
-              return { name, url, ok: false, status: null, ms: Date.now()-started, error: String(e.message || e).slice(0,180) };
+              const message=String(e.message||e).slice(0,180);
+              return {name,url,kind,ok:false,status:null,ms:Date.now()-started,
+                classification:/timeout|aborted/i.test(message)?'endpoint_timeout':'network_error',error:message};
             }
           }
 
           (async () => {
-            const results = [];
-            for (const system of systems) results.push(await check(system));
+            const results = await Promise.all(systems.map(check));
             const out = {
               checkedAt: new Date().toISOString(),
               total: results.length,
               healthy: results.filter(x=>x.ok).length,
               unhealthy: results.filter(x=>!x.ok).length,
+              confirmedPageProblems: results.filter(x=>!x.ok && x.kind==='website' && ['content_mismatch','http_error'].includes(x.classification)).length,
+              backendTimeouts: results.filter(x=>!x.ok && x.kind==='backend' && x.classification==='endpoint_timeout').length,
               systems: results
             };
             fs.writeFileSync('owner-master-dashboard/system-status.json', JSON.stringify(out,null,2)+'\n');
