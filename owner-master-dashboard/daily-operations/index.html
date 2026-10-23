@@ -13,6 +13,18 @@
 <header class="top"><div class="topin"><div class="brand">SSAG <span>DAILY OPERATIONS</span></div><div class="flex"><a href="../">Owner Dashboard ↗</a><a href="https://cezar-master-build-launchpad.vercel.app/">All Builds ↗</a></div></div></header>
 <main class="shell">
 <section class="hero"><div class="eyebrow">Owner execution desk • mobile first • Arizona time</div><h1>Run the businesses.<br>Book the next customer.</h1><p>One daily operating routine connects acquisition, marketing, Sentinel Zero, quoting, client follow-up, licensing, dispatch, and reporting. Confirmed customer outcomes—not clicks or deployment counts—measure progress.</p><div class="actions"><a class="btn primary" href="#today">Start Today's Shift</a><a class="btn" href="#tools">Open Operating Tools</a><a class="btn" href="#systems">System Health</a></div><div class="tag check" id="saveMode">Local device scorecard • not synchronized</div></section>
+<section class="panel success" id="call-ready">
+  <div class="eyebrow">Live sales activation • use real records</div>
+  <h2>Today's revenue actions</h2>
+  <p>Work from the same sourced Tucson prospect queue and the same Google Sheets records. New research prospects are not customers and are not counted as outreach or sales until recorded.</p>
+  <div class="actions">
+    <a class="btn primary" target="_blank" rel="noopener" href="https://docs.google.com/spreadsheets/d/1-AZV0e8WxusVytTphS3D30bLTIatc87ydqE03hnWHRc/edit#gid=913004">1. Call-Ready Prospect Queue ↗</a>
+    <a class="btn green" target="_blank" rel="noopener" href="https://docs.google.com/spreadsheets/d/1-AZV0e8WxusVytTphS3D30bLTIatc87ydqE03hnWHRc/edit#gid=913005">2. Live Executive Scorecard ↗</a>
+    <a class="btn" target="_blank" rel="noopener" href="https://ssag-paypal-clientflow.vercel.app/#contact">3. Customer Inquiry Intake ↗</a>
+    <a class="btn" target="_blank" rel="noopener" href="https://docs.google.com/spreadsheets/d/1-AZV0e8WxusVytTphS3D30bLTIatc87ydqE03hnWHRc/edit#gid=913001">4. Daily Caller Activity ↗</a>
+  </div>
+  <p class="hint">First wave: 20 research prospects; verify business details, comply with relevant calling restrictions and record every real outcome. Checkout has not been activated: ClientFlow is for inquiries until the owner verifies real PayPal links and settlement.</p>
+</section>
 <div class="panel warning"><b>Owner data safety:</b><p>This static page is publicly reachable by URL, not password-protected. Its counters and checkmarks save only in this device's browser. Do not enter names, phone numbers, passwords, payment information, or confidential customer notes here. Keep customer details in an authorized CRM. Export a backup if you change devices.</p></div>
 <section class="panel" id="today"><div class="eyebrow">01 • Daily sales performance</div><div class="flex" style="justify-content:space-between"><h2 id="dateTitle">Today</h2><div class="actions"><button class="btn sm" id="exportCsv">Export CSV</button><button class="btn sm" id="backup">Backup JSON</button><label class="btn sm">Restore JSON<input id="restore" type="file" accept=".json,application/json" hidden></label></div></div><div class="stats" id="stats"></div><p class="hint">Daily starter targets: 50 manual outreach attempts, 5 useful conversations, 5 follow-up actions. Qualified appointments and sales are tracked as outcomes, not assumed.</p><div class="metric-controls" id="metricControls"></div><div class="panel" style="margin-bottom:0"><h3>Record actual revenue collected (not proposals or forecast)</h3><div class="flex"><span>$</span><input id="cashAmount" type="number" min="0" step=".01" placeholder="0.00" inputmode="decimal"><button class="btn green" id="addCash">Record received payment</button><button class="btn sm" id="undo" title="Undo last counter or task action">Undo last</button></div><p class="hint" id="lastAction" aria-live="polite">No action recorded yet.</p></div></section>
 <div class="split">
@@ -51,7 +63,7 @@ const today=fmtDate(new Date()), safeNums=["dials","conversations","decisions","
 const labels={dials:"Calls / outreach",conversations:"Conversations",decisions:"Decision-makers",followups:"Follow-ups done",booked:"Reviews booked",proposals:"Proposals sent",invoices:"Invoices issued",closed:"Sales closed",cash:"Cash collected"};
 const tasks=[
 ["Open operations dashboard and check current health","Mark down any service that is degraded before using it"],
-["Select today's qualified leads in the Arizona lead engine","Verify each business opportunity instead of relying on an inferred gap"],
+["Open first-wave Tucson prospect queue and verify 20 research entries","Assign owners and check legal calling restrictions, numbers and fit before contact"],
 ["Assign outreach responsibilities for today's calling block","Keep opt-outs/DNC rules and per-caller expectations clear"],
 ["Complete first 25 manual business outreach attempts","Use the correct offer; record actual outcomes in a CRM"],
 ["Follow up with all due prospects and missed replies","Record next action, owner and due date in the source-of-truth CRM"],
