@@ -67,7 +67,7 @@ try{const d=JSON.parse(localStorage.getItem(storageKey)||"{}");if(d&&typeof d===
 const empty=()=>({dials:0,conversations:0,decisions:0,followups:0,booked:0,proposals:0,invoices:0,closed:0,cash:0,checks:[],actions:[]});
 if(!data.days[today])data.days[today]=empty();
 let day=data.days[today];
-const $(id)=>document.getElementById(id);
+const $=(id)=>document.getElementById(id);
 function save(){try{localStorage.setItem(storageKey,JSON.stringify(data))}catch(e){$("lastAction").textContent="Storage failed. Export a backup: "+e.message}}
 function pushUndo(){undoState=JSON.stringify(data.days[today])}
 function num(v){const n=Number(v);return Number.isFinite(n)&&n>=0?n:0}
