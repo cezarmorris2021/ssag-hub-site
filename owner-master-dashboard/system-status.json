@@ -1,159 +1,231 @@
 {
-  "checkedAt": "2026-10-22T17:46:11.388Z",
-  "total": 21,
-  "healthy": 17,
-  "unhealthy": 4,
+  "checkedAt": "2026-10-23T12:13:43.606Z",
+  "total": 24,
+  "healthy": 19,
+  "unhealthy": 5,
+  "confirmedPageProblems": 0,
+  "backendTimeouts": 0,
   "systems": [
     {
       "name": "Master Owner Dashboard",
       "url": "https://cezarmorris2021.github.io/ssag-hub-site/owner-master-dashboard/",
+      "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 286
+      "ms": 172,
+      "classification": "healthy",
+      "pageTitle": "Cezar Master Build Dashboard"
     },
     {
       "name": "Arizona Website Opportunity Engine",
       "url": "https://cezarmorris2021.github.io/ssag-hub-site/arizona-website-opportunity-engine/",
+      "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 76
+      "ms": 125,
+      "classification": "healthy"
     },
     {
       "name": "Revenue-Ready Make-Good Suite",
       "url": "https://cezarmorris2021.github.io/ssag-hub-site/revenue-ready-make-good/",
+      "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 97
+      "ms": 121,
+      "classification": "healthy"
     },
     {
       "name": "SSAG Owner Launchpad",
       "url": "https://ssag-owner-launchpad.vercel.app",
+      "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 100
+      "ms": 266,
+      "classification": "healthy"
+    },
+    {
+      "name": "Master Build Launchpad",
+      "url": "https://cezar-master-build-launchpad.vercel.app/",
+      "kind": "website",
+      "ok": true,
+      "status": 200,
+      "ms": 283,
+      "classification": "healthy",
+      "pageTitle": "Cezar Master Build Launchpad"
     },
     {
       "name": "SSAG Platform Public",
       "url": "https://ssag-platform-public.vercel.app",
+      "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 119
+      "ms": 335,
+      "classification": "healthy"
     },
     {
       "name": "SSAG Command Center",
       "url": "https://ssag-command-center.vercel.app",
+      "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 152
+      "ms": 265,
+      "classification": "healthy"
     },
     {
       "name": "SSAG Command Center Elite",
       "url": "https://ssag-command-center-elite.vercel.app",
+      "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 53
+      "ms": 246,
+      "classification": "healthy"
     },
     {
       "name": "Sentinel Zero Public",
       "url": "https://cezarmorris2021.github.io/Sentinel-Zero-LLC/",
+      "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 65
+      "ms": 177,
+      "classification": "healthy"
     },
     {
       "name": "Sentinel Zero Enterprise",
       "url": "https://sentinelzeroenterprise2026-08-21.vercel.app",
+      "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 110
+      "ms": 268,
+      "classification": "healthy"
     },
     {
       "name": "Cyber Exposure Score",
       "url": "https://sentinel-zero-cyber-exposure-score.vercel.app",
+      "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 116
+      "ms": 295,
+      "classification": "healthy"
     },
     {
       "name": "Sentinel Zero Sales Coach",
       "url": "https://sentinel-zero-sales-coach.vercel.app",
+      "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 112
+      "ms": 337,
+      "classification": "healthy"
     },
     {
       "name": "Sentinel Zero Proposal Builder",
       "url": "https://sentinel-zero-proposal-builder.vercel.app",
+      "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 143
+      "ms": 364,
+      "classification": "healthy"
     },
     {
       "name": "Sentinel Zero Review Intake",
       "url": "https://sentinel-zero-review-intake.vercel.app",
+      "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 107
+      "ms": 409,
+      "classification": "healthy"
     },
     {
       "name": "Savings Command Center",
-      "url": "https://savings-command-center.vercel.app",
+      "url": "https://savings-command-center.vercel.app/",
+      "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 217
+      "ms": 555,
+      "classification": "healthy",
+      "pageTitle": "Savings Command Center"
     },
     {
       "name": "Retail Arbitrage Command Center",
-      "url": "https://retail-arbitrage-command-center.vercel.app",
+      "url": "https://retail-arbitrage-command-center.vercel.app/",
+      "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 193
+      "ms": 467,
+      "classification": "healthy",
+      "pageTitle": "Local Arbitrage Scanner"
+    },
+    {
+      "name": "Revenue-Ready Make-Up Suite",
+      "url": "https://revenue-ready-makeup-suite.vercel.app/",
+      "kind": "website",
+      "ok": true,
+      "status": 200,
+      "ms": 459,
+      "classification": "healthy",
+      "pageTitle": "Revenue Ready Make-Up Suite"
     },
     {
       "name": "Employee Call Dispatch",
       "url": "https://datatranferservice-hue.github.io/employee-call-dispatch/",
+      "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 60
+      "ms": 311,
+      "classification": "healthy"
     },
     {
       "name": "CallFlow Health",
       "url": "https://callflow-command.onrender.com/api/health",
+      "kind": "backend",
       "ok": false,
-      "status": null,
-      "ms": 20001,
-      "error": "The operation was aborted due to timeout"
+      "status": 503,
+      "ms": 585,
+      "classification": "http_error"
     },
     {
       "name": "Sentinel Zero AI Outbound Health",
       "url": "https://sentinel-zero-ai-outbound.onrender.com/health",
+      "kind": "backend",
       "ok": false,
-      "status": null,
-      "ms": 20001,
-      "error": "The operation was aborted due to timeout"
+      "status": 503,
+      "ms": 476,
+      "classification": "http_error"
     },
     {
       "name": "Two-Player Chess Health",
       "url": "https://cezar-two-player-chess.onrender.com/health",
-      "ok": true,
-      "status": 200,
-      "ms": 12514
+      "kind": "backend",
+      "ok": false,
+      "status": 503,
+      "ms": 446,
+      "classification": "http_error"
     },
     {
       "name": "SSAG Command Center Backend Health",
       "url": "https://ssag-command-center-backend.onrender.com/api/health",
+      "kind": "backend",
       "ok": false,
-      "status": null,
-      "ms": 20001,
-      "error": "The operation was aborted due to timeout"
+      "status": 503,
+      "ms": 627,
+      "classification": "http_error"
     },
     {
       "name": "SSAG Backend Health",
       "url": "https://ssag-backend.onrender.com/api/health",
+      "kind": "backend",
       "ok": false,
-      "status": null,
-      "ms": 20001,
-      "error": "The operation was aborted due to timeout"
+      "status": 503,
+      "ms": 602,
+      "classification": "http_error"
+    },
+    {
+      "name": "GitHub Public Repository API",
+      "url": "https://api.github.com/users/cezarmorris2021/repos?per_page=1&type=public",
+      "kind": "inventory",
+      "ok": true,
+      "status": 200,
+      "ms": 454,
+      "classification": "healthy"
     }
   ]
 }
