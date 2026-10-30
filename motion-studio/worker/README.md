@@ -44,7 +44,9 @@ cd /opt/ssag-motion-worker
 pip install -r requirements.txt
 export SSAG_API_KEY="$(python -c 'import secrets;print(secrets.token_urlsafe(32))')"
 export SSAG_ALLOWED_ORIGINS=https://cezarmorris2021.github.io
-export SSAG_PRIVATE_STORAGE=/var/lib/ssag-motion-private
+export SSAG_PRIVATE_STORAGE="$HOME/ssag-motion-private"
+mkdir -p "$SSAG_PRIVATE_STORAGE"
+chmod 700 "$SSAG_PRIVATE_STORAGE"
 python -m uvicorn server:api --host 127.0.0.1 --port 8787 --workers 1
 ```
 
