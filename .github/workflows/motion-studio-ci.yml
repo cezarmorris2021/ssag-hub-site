@@ -1,0 +1,29 @@
+name: Motion Studio API quality gate
+on:
+  push:
+    paths:
+      - 'motion-studio/**'
+      - '.github/workflows/motion-studio-ci.yml'
+  pull_request:
+    paths:
+      - 'motion-studio/**'
+      - '.github/workflows/motion-studio-ci.yml'
+permissions:
+  contents: read
+jobs:
+  cpu-api-tests:
+    name: Security and GPU-truth tests (not an actual video render)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install API-only requirements
+        run: python -m pip install -r motion-studio/worker/requirements.txt
+      - name: Compile syntax
+        run: python -m py_compile motion-studio/worker/server.py motion-studio/worker/tests/test_api.py
+      - name: Run auth, GPU-gate and deletion tests
+        working-directory: motion-studio/worker
+        run: python -m unittest discover -s tests -v
