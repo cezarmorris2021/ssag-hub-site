@@ -14,11 +14,17 @@
 <body>
 <header class="top"><div class="topin"><div class="brand">SSAG <small>OWNER MASTER BUILD DASHBOARD</small></div><nav class="nav"><a class="btn" href="../">SSAG Hub</a><a class="btn" href="../revenue-ready-make-good/">Make-Good Suite</a></nav></div></header>
 <main class="shell">
+  <section class="panel alert" id="motionCapabilityPanel" aria-label="Verified motion video capability readiness">
+    <div class="eyebrow">UNVERIFIED CAPABILITY • DIGITAL MARKETING & MEDIA</div>
+    <h2>Photo-to-dance video: <span id="motionCapabilityState" class="fail">BLOCKED</span></h2>
+    <p id="motionCapabilityText">Owner interface and worker source exist, but no NVIDIA GPU rendering service or real successful MP4 has been verified. This is not a customer-ready AI video generator.</p>
+    <div class="toolbar"><a class="btn ice" href="../motion-studio/">Open SSAG Motion Studio</a><a class="btn" href="https://github.com/cezarmorris2021/ssag-hub-site/issues/1">See repair issue</a></div>
+  </section>
   <section class="hero">
     <div class="eyebrow">MASTER OWNER VIEW • AUTOMATIC GAP INTELLIGENCE</div>
     <h1>Cezar's Build & Asset Command Dashboard</h1>
     <p>Every recovered asset tells you what it can do, how it creates or protects value, its operating class, what is missing and the next action. The 389-item recovery stays frozen as a historical baseline; current deployments are tracked separately.</p>
-    <div class="toolbar"><a class="btn primary" href="./daily-operations/">Start Daily Operations →</a><a class="btn primary" href="../revenue-ready-make-good/">Revenue-Ready Make-Good Suite</a><a class="btn ice" href="../arizona-website-opportunity-engine/">Arizona Website Opportunity Engine</a><a class="btn green" href="https://cezar-master-build-launchpad.vercel.app" target="_blank" rel="noopener">Prior Master Launchpad</a></div>
+    <div class="toolbar"><a class="btn primary" href="./daily-operations/">Start Daily Operations →</a><a class="btn primary" href="../revenue-ready-make-good/">Revenue-Ready Make-Good Suite</a><a class="btn ice" href="../arizona-website-opportunity-engine/">Arizona Website Opportunity Engine</a><a class="btn ice" href="../motion-studio/">Motion Studio • GPU blocked</a><a class="btn green" href="https://cezar-master-build-launchpad.vercel.app" target="_blank" rel="noopener">Prior Master Launchpad</a></div>
   </section>
 
   <section class="metrics">
@@ -144,6 +150,14 @@ fetch('./current-platform-state.json',{cache:'no-store'}).then(r=>r.json()).then
     <div class="card"><span class="badge bad">DATABASE WATCH</span><h3>Staging DB recorded expiration: ${esc(expiry)}</h3><p>${esc(db?db.warning:'No database record found.')}</p></div>
     <div class="card"><span class="badge warn">PAYMENTS</span><h3>Stripe connection observed: ${esc(s.payments.mode.toUpperCase())} mode</h3><p>Live checkout is not marked verified until an authorized live account is connected.</p></div>`;
 }).catch(()=>{currentState.innerHTML='<div class="card"><p>Recorded platform audit unavailable.</p></div>'});
+</script>
+<script>
+fetch('./capability-proof.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Capability proof unavailable');return r.json()}).then(s=>{
+  const label=document.getElementById('motionCapabilityState'),note=document.getElementById('motionCapabilityText');
+  label.textContent=s.status||'UNKNOWN';
+  label.className=s.status==='READY'?'ok':'fail';
+  note.textContent=(s.blocker||'No end-to-end evidence available')+' Latest evidence date: '+(s.audited_on||'unknown')+'.';
+}).catch(()=>{document.getElementById('motionCapabilityText').textContent='Capability proof file not available. Do not assume video generation works.';});
 </script>
 <script src="./live-repositories.js" defer></script>
 </body>
