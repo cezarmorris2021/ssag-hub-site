@@ -102,6 +102,16 @@ def purge_expired():
             shutil.rmtree(ROOT / row["id"], ignore_errors=True)
             db.execute("DELETE FROM jobs WHERE id=?", (row["id"],))
 
+def cleanup_loop():
+    # Enforce the 24-hour retention policy even if no one submits new jobs.
+    while True:
+        time.sleep(3600)
+        try:
+            purge_expired()
+        except Exception:
+            # Temporary database or filesystem error: retry next hour.
+            pass
+
 def engine_state():
     # Neither the presence of a Python package nor a web page alone proves readiness.
     executable = shutil.which("motion-mirror")
@@ -168,7 +178,9 @@ def render_loop():
             q.task_done()
 
 init_db()
+purge_expired()
 threading.Thread(target=render_loop, name="ssag-gpu-worker", daemon=True).start()
+threading.Thread(target=cleanup_loop, name="ssag-retention-cleanup", daemon=True).start()
 
 @api.get("/health")
 def health():
