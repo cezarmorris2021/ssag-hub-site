@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "capability_id": "ssag-motion-transfer",
+  "title": "SSAG Photo-to-Dance Motion Transfer",
+  "audited_on": "2026-10-30",
+  "status": "BLOCKED",
+  "definition_of_done": "A real private CUDA job accepts consented character photo plus licensed motion reference and produces an identity-reviewed downloadable MP4 with successful deletion and logged evidence.",
+  "evidence": {
+    "owner_frontend": {
+      "state": "SOURCE_COMMITTED",
+      "url": "https://cezarmorris2021.github.io/ssag-hub-site/motion-studio/",
+      "note": "Published UI is not proof of motion generation"
+    },
+    "gpu_api": {
+      "state": "SOURCE_COMMITTED",
+      "repository": "https://github.com/cezarmorris2021/ssag-hub-site/tree/main/motion-studio/worker",
+      "note": "Executable code and CI tests do not mean deployed GPU service"
+    },
+    "gpu_host": {
+      "state": "NOT_CONNECTED"
+    },
+    "pretrained_weights": {
+      "state": "NOT_VERIFIED"
+    },
+    "end_to_end_render": {
+      "state": "NOT_VERIFIED",
+      "output_url": null
+    },
+    "owner_approval": {
+      "state": "NOT_GRANTED"
+    }
+  },
+  "blocker": "No owner-controlled NVIDIA CUDA GPU host with Motion Mirror and model weights is connected. Avoid paid signups without owner consent.",
+  "next_action": "Provide or obtain a permitted GPU compute environment meeting Motion Mirror's documented requirements; configure secure API and run consented photo-plus-reference video generation, then verify and record real MP4 output.",
+  "tracking_issue": "https://github.com/cezarmorris2021/ssag-hub-site/issues/1",
+  "note": "Never mark READY based on a live page, a passed CPU API test, mock video, or an upstream GitHub README alone."
+}
