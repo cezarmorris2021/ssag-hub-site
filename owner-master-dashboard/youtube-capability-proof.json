@@ -24,8 +24,8 @@
     },
     "source_tests": {
       "state": "PASSED",
-      "run_url": "https://github.com/cezarmorris2021/ssag-hub-site/actions/runs/41169382255",
-      "note": "Python safety tests and JavaScript syntax passed; no live channel OAuth or publishing run."
+      "run_url": "https://github.com/cezarmorris2021/ssag-hub-site/actions/runs/41169679578",
+      "note": "9 Python publisher safety tests, JavaScript parse, and browser QA completed successfully"
     },
     "channel_oauth": {
       "state": "NOT_CONNECTED"
@@ -45,6 +45,19 @@
     },
     "payment_collection": {
       "state": "NOT_VERIFIED"
+    },
+    "browser_qa": {
+      "state": "PASSED",
+      "run_url": "https://github.com/cezarmorris2021/ssag-hub-site/actions/runs/41169679578",
+      "checked": [
+        "create weekly job",
+        "counts",
+        "thumbnail PNG download",
+        "support ticket",
+        "weekly CSV download",
+        "approval blocker"
+      ],
+      "note": "Playwright Chromium browser test under local HTTP; not YouTube OAuth or API upload"
     }
   },
   "blocker": "No YouTube owner OAuth authorization, authorized media/video file, proof of completed upload, or verified analytics pipeline.",
