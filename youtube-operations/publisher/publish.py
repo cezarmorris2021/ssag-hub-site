@@ -13,7 +13,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-SCOPES = ["https://www.googleapis.com/auth/youtube.upload"]
+SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube.readonly"]
 CLIENT_SECRETS_ENV = "SSAG_YOUTUBE_OAUTH_CLIENT_SECRETS"
 DEFAULT_TOKEN = Path.home() / ".config" / "ssag-youtube" / "youtube-token.json"
 
