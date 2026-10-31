@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "capability_id": "ssag-youtube-channel-automation",
+  "audited_on": "2026-10-30",
+  "status": "PARTIAL",
+  "note": "Source and GitHub CI evidence do not imply a connected YouTube channel or actual uploads.",
+  "features": {
+    "owner_workstation": {
+      "state": "SOURCE_COMMITTED",
+      "url": "https://cezarmorris2021.github.io/ssag-hub-site/youtube-operations/",
+      "functions": [
+        "weekly production board",
+        "script/metadata drafts",
+        "thumbnail PNG generator",
+        "private-first manifest export",
+        "manual support tracking",
+        "CSV/JSON backups"
+      ]
+    },
+    "oauth_publisher": {
+      "state": "SOURCE_COMMITTED",
+      "repository": "https://github.com/cezarmorris2021/ssag-hub-site/tree/main/youtube-operations/publisher",
+      "notice": "Runs only on an owner-controlled computer and requires explicit channel-owner OAuth"
+    },
+    "source_tests": {
+      "state": "PASSED_2026_10_30",
+      "run_url": "https://github.com/cezarmorris2021/ssag-hub-site/actions/runs/41169382255"
+    },
+    "channel_oauth": {
+      "state": "NOT_CONNECTED"
+    },
+    "youtube_upload": {
+      "state": "NOT_VERIFIED",
+      "video_id": null
+    },
+    "scheduled_publication": {
+      "state": "NOT_VERIFIED"
+    },
+    "analytics": {
+      "state": "NOT_CONNECTED"
+    },
+    "support_team_sync": {
+      "state": "LOCAL_ONLY"
+    },
+    "payment_collection": {
+      "state": "NOT_VERIFIED"
+    }
+  },
+  "blocker": "No YouTube owner OAuth authorization, authorized media/video file, proof of completed upload, or verified analytics pipeline.",
+  "next_action": "Connect a channel owner's Google OAuth with verified channel ID using SSAG's private publisher, then upload one authorized real video privately and capture the YouTube video ID. Verify scheduling and client-support workflow.",
+  "user_only_prerequisite": "Owner must consent to Google OAuth and verify the intended channel; credentials are never placed in public GitHub."
+}
