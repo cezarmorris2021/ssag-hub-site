@@ -20,6 +20,12 @@
     <p id="motionCapabilityText">Owner interface and worker source exist, but no NVIDIA GPU rendering service or real successful MP4 has been verified. This is not a customer-ready AI video generator.</p>
     <div class="toolbar"><a class="btn ice" href="../motion-studio/">Open SSAG Motion Studio</a><a class="btn" href="https://github.com/cezarmorris2021/ssag-hub-site/issues/1">See repair issue</a></div>
   </section>
+  <section class="panel alert" aria-label="YouTube channel automation production readiness">
+    <div class="eyebrow">DIGITAL MARKETING & MEDIA • YOUTUBE AUTOMATION</div>
+    <h2>YouTube Channel Operations: <span id="youtubeCapabilityState" class="fail">PARTIAL</span></h2>
+    <p id="youtubeCapabilityText">Workstation and upload code are committed; no customer account OAuth, real YouTube upload or analytics is verified. Client-facing auto-publishing is NOT ready.</p>
+    <div class="toolbar"><a class="btn ice" href="../youtube-operations/">Open YouTube Workstation</a><a class="btn" href="../youtube-operations/publisher/">Owner publishing source</a></div>
+  </section>
   <section class="hero">
     <div class="eyebrow">MASTER OWNER VIEW • AUTOMATIC GAP INTELLIGENCE</div>
     <h1>Cezar's Build & Asset Command Dashboard</h1>
@@ -158,6 +164,13 @@ fetch('./capability-proof.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Erro
   label.className=s.status==='READY'?'ok':'fail';
   note.textContent=(s.blocker||'No end-to-end evidence available')+' Latest evidence date: '+(s.audited_on||'unknown')+'.';
 }).catch(()=>{document.getElementById('motionCapabilityText').textContent='Capability proof file not available. Do not assume video generation works.';});
+</script>
+<script>
+fetch('./youtube-capability-proof.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('YouTube capability proof unavailable');return r.json()}).then(s=>{
+  const label=document.getElementById('youtubeCapabilityState'),info=document.getElementById('youtubeCapabilityText');
+  label.textContent=s.status||'UNKNOWN';label.className=s.status==='READY'?'ok':'fail';
+  info.textContent=(s.blocker||'YouTube upload proof missing')+' Evidence audit date: '+(s.audited_on||'unknown')+'.';
+}).catch(()=>{document.getElementById('youtubeCapabilityText').textContent='YouTube capability proof unavailable; do not infer publishing works.'});
 </script>
 <script src="./live-repositories.js" defer></script>
 </body>
