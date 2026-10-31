@@ -33,5 +33,29 @@
   "blocker": "No owner-controlled NVIDIA CUDA GPU host with Motion Mirror and model weights is connected. Avoid paid signups without owner consent.",
   "next_action": "Provide or obtain a permitted GPU compute environment meeting Motion Mirror's documented requirements; configure secure API and run consented photo-plus-reference video generation, then verify and record real MP4 output.",
   "tracking_issue": "https://github.com/cezarmorris2021/ssag-hub-site/issues/1",
-  "note": "Never mark READY based on a live page, a passed CPU API test, mock video, or an upstream GitHub README alone."
+  "note": "Never mark READY based on a live page, a passed CPU API test, mock video, or an upstream GitHub README alone.",
+  "verification": {
+    "checked_at": "2026-10-30",
+    "source": "GitHub connected repository and Actions records",
+    "github_pages": {
+      "state": "DEPLOY_WORKFLOW_SUCCEEDED",
+      "run_url": "https://github.com/cezarmorris2021/ssag-hub-site/actions/runs/41139790775",
+      "note": "Browser HTTP reachability was not independently confirmed"
+    },
+    "api_ci": {
+      "state": "TESTS_PASSED",
+      "run_url": "https://github.com/cezarmorris2021/ssag-hub-site/actions/runs/41139790410",
+      "checks": [
+        "Python compilation",
+        "API authorization",
+        "GPU readiness gate",
+        "blocked upload when GPU absent",
+        "job deletion"
+      ],
+      "note": "No CUDA hardware rendering tested"
+    },
+    "real_gpu_job": {
+      "state": "NOT_VERIFIED"
+    }
+  }
 }
