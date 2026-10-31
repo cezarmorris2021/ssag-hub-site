@@ -1,0 +1,32 @@
+{
+  "channel": "Clever Living Lab",
+  "title": "3 ways to declutter your phone today",
+  "accent": "#64ccff",
+  "size": "720x1280",
+  "scenes": [
+    {
+      "headline": "Phone feeling cluttered?",
+      "body": "Try three simple home-screen habits.",
+      "narration": "Does your phone feel cluttered? Here are three practical ways to organize it.",
+      "seconds": 6
+    },
+    {
+      "headline": "Group apps by purpose",
+      "body": "Keep everyday tools in one predictable spot.",
+      "narration": "Put your most used apps where your thumb can easily reach them.",
+      "seconds": 6
+    },
+    {
+      "headline": "Remove unused shortcuts",
+      "body": "A clean screen is easier to navigate.",
+      "narration": "Remove shortcuts you rarely tap. You can still find the apps in your app list.",
+      "seconds": 6
+    },
+    {
+      "headline": "Keep your best tools visible",
+      "body": "Save this checklist and subscribe for more.",
+      "narration": "Keep the most useful tools easy to find, and save this simple checklist for later.",
+      "seconds": 6
+    }
+  ]
+}
