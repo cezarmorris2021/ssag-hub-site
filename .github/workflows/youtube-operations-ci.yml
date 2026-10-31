@@ -36,3 +36,13 @@ jobs:
           if(!html.includes('exportReport')||!html.includes('downloadPack'))throw new Error('Missing production controls');
           console.log('YouTube UI JavaScript parsed successfully');
           JS
+      - name: Install browser QA dependency
+        run: |
+          npm --prefix youtube-operations install --no-save playwright@1.57.0
+          npx --prefix youtube-operations playwright install --with-deps chromium
+      - name: Browser-test owner production and support workflow
+        run: |
+          python -m http.server 8765 --bind 127.0.0.1 --directory youtube-operations >/tmp/ssag-youtube-test-server.log 2>&1 &
+          sleep 2
+          node youtube-operations/tests/browser-qa.js
+
