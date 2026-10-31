@@ -24,8 +24,8 @@
     },
     "source_tests": {
       "state": "PASSED",
-      "run_url": "https://github.com/cezarmorris2021/ssag-hub-site/actions/runs/41169679578",
-      "note": "9 Python publisher safety tests, JavaScript parse, and browser QA completed successfully"
+      "run_url": "https://github.com/cezarmorris2021/ssag-hub-site/actions/runs/41169877553",
+      "proof": "Nine publisher safety tests and JavaScript parse passed"
     },
     "channel_oauth": {
       "state": "NOT_CONNECTED"
@@ -48,20 +48,19 @@
     },
     "browser_qa": {
       "state": "PASSED",
-      "run_url": "https://github.com/cezarmorris2021/ssag-hub-site/actions/runs/41169679578",
-      "checked": [
-        "create weekly job",
-        "counts",
-        "thumbnail PNG download",
-        "support ticket",
-        "weekly CSV download",
-        "approval blocker"
-      ],
-      "note": "Playwright Chromium browser test under local HTTP; not YouTube OAuth or API upload"
+      "run_url": "https://github.com/cezarmorris2021/ssag-hub-site/actions/runs/41169877553",
+      "proof": "Chromium tested weekly job, counters, PNG thumbnail download, client support ticket, CSV export, and approval blocker"
+    },
+    "cpu_short_renderer": {
+      "state": "VERIFIED_ACTUAL_MP4",
+      "repository": "https://github.com/cezarmorris2021/ssag-hub-site/tree/main/youtube-operations/renderer",
+      "ci_run": "https://github.com/cezarmorris2021/ssag-hub-site/actions/runs/41169877553",
+      "proof": "GitHub Actions rendered 360x640 test short and verified actual H.264 MP4 with FFprobe; separate 22s local 720x1280 demo also produced",
+      "limitations": "Original faceless typography and optional offline robotic narration only; no AI actor dance, no automatic publishing."
     }
   },
   "blocker": "No YouTube owner OAuth authorization, authorized media/video file, proof of completed upload, or verified analytics pipeline.",
-  "next_action": "Connect a channel owner's Google OAuth with verified channel ID using SSAG's private publisher, then upload one authorized real video privately and capture the YouTube video ID. Verify scheduling and client-support workflow.",
+  "next_action": "Obtain YouTube channel owner's authorized OAuth connection, upload a rights-cleared actual MP4 using the private-first publisher, record the real video ID, and verify scheduling; then connect protected analytics and shared support ticket data.",
   "user_only_prerequisite": "Owner must consent to Google OAuth and verify the intended channel; credentials are never placed in public GitHub.",
   "tracking_issue": "https://github.com/cezarmorris2021/ssag-hub-site/issues/2"
 }
