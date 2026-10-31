@@ -23,8 +23,9 @@
       "notice": "Runs only on an owner-controlled computer and requires explicit channel-owner OAuth"
     },
     "source_tests": {
-      "state": "PASSED_2026_10_30",
-      "run_url": "https://github.com/cezarmorris2021/ssag-hub-site/actions/runs/41169382255"
+      "state": "PASSED",
+      "run_url": "https://github.com/cezarmorris2021/ssag-hub-site/actions/runs/41169382255",
+      "note": "Python safety tests and JavaScript syntax passed; no live channel OAuth or publishing run."
     },
     "channel_oauth": {
       "state": "NOT_CONNECTED"
@@ -48,5 +49,6 @@
   },
   "blocker": "No YouTube owner OAuth authorization, authorized media/video file, proof of completed upload, or verified analytics pipeline.",
   "next_action": "Connect a channel owner's Google OAuth with verified channel ID using SSAG's private publisher, then upload one authorized real video privately and capture the YouTube video ID. Verify scheduling and client-support workflow.",
-  "user_only_prerequisite": "Owner must consent to Google OAuth and verify the intended channel; credentials are never placed in public GitHub."
+  "user_only_prerequisite": "Owner must consent to Google OAuth and verify the intended channel; credentials are never placed in public GitHub.",
+  "tracking_issue": "https://github.com/cezarmorris2021/ssag-hub-site/issues/2"
 }
