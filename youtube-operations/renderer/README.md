@@ -26,4 +26,4 @@ To create a different video, edit the project JSON `channel`, `title`, `accent`,
 ### Production handoff
 Generate a final MP4, inspect voice/caption readability, obtain client approval, attach an approved and rights-cleared thumbnail, fill out the YouTube workstation manifest, and use the separately authorized OAuth publisher. A manifest or a rendered MP4 alone does not mean it was uploaded or scheduled.
 
-**Status:** source committed; actual CI MP4 render test must pass before renderer can be listed as validated. Even after local encoding passes, published video, channel reach and customer delivery remain unverified.
+**Verification (2026-10-30):** [GitHub Actions real MP4 test](https://github.com/cezarmorris2021/ssag-hub-site/actions/runs/41169877553) succeeded, including the 360×640 short video rendering test and FFprobe H.264 validation. An independent original 22-second 720×1280 MP4 example with offline narration was also rendered during the build review. The renderer can now be described as tested for basic CPU faceless Shorts, but published videos, connected channels, client SLA and delivery remain unverified.
