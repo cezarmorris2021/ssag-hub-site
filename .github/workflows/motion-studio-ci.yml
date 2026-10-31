@@ -27,3 +27,19 @@ jobs:
       - name: Run auth, GPU-gate and deletion tests
         working-directory: motion-studio/worker
         run: python -m unittest discover -s tests -v
+      - name: Validate free-GPU notebook structure and Python code without running GPU
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('motion-studio/free-gpu-notebook.ipynb')
+          nb=json.loads(p.read_text(encoding='utf-8'))
+          assert nb['nbformat']==4
+          code=[ ''.join(cell['source']) for cell in nb['cells'] if cell['cell_type']=='code']
+          assert len(code)>=5
+          for i,source in enumerate(code):
+              compile(source, str(p)+':cell:'+str(i), 'exec')
+          assert all('--backend","mock' not in source for source in code)
+          print("Notebook JSON and",len(code),"Python cells parsed; no GPU render was attempted.")
+          PY
+
