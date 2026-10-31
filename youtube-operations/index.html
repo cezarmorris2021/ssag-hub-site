@@ -33,7 +33,7 @@
 <label class="checkline"><input type="checkbox" id="channelVerified"> <span>Destination channel is verified in Google OAuth (not just typed here)</span></label>
 <label class="checkline"><input type="checkbox" id="madeForKids"> <span>Content is directed to children (YouTube made-for-kids selection)</span></label>
 <label class="checkline"><input type="checkbox" id="synthetic"> <span>Contains realistic altered/synthetic media requiring disclosure</span></label>
-<div class="actions"><button type="button" id="downloadPack">Export YouTube upload manifest</button><button type="button" id="downloadScript" class="outline">Export production brief</button></div>
+<div class="actions"><button type="button" id="downloadPack">Export YouTube upload manifest</button><button type="button" id="downloadScript" class="outline">Export production brief</button><button type="button" id="exportRenderProject" class="outline">Export Shorts render project</button></div>
 <div class="status" id="exportStatus">No video uploaded or scheduled from this workstation.</div>
 </section>
 <section class="panel"><h2>3. Branded thumbnail creator</h2>
@@ -52,7 +52,7 @@
 <div class="stack" id="jobs"><p>No content jobs added.</p></div><p class="small">Job state is a manual record, not YouTube confirmation. Do not mark as published until an actual video link exists; record it in the upload evidence field when known. Browser storage is local to this device/browser. Export backups regularly. Avoid personal or sensitive client information.</p></section>
 <section class="panel wide"><h2>6. What a complete supported service requires</h2><div class="two"><div><h3>Already available in this workstation</h3><p>Content planning • script and metadata drafts • standard thumbnail PNG • approvals and rights checklist • production tracking • support ticket tracking • backup/export</p></div><div><h3>Requires connected services</h3><p>YouTube channel OAuth authorization • approved final video files • actual upload evidence • scheduling response • channel analytics • client-by-client identity and server-side access controls • verified social cross-posting</p></div></div>
 <div class="actions"><a class="btn outline" href="https://github.com/cezarmorris2021/ssag-hub-site/tree/main/youtube-operations/publisher">Owner OAuth publisher and instructions</a><a class="btn outline" href="https://studio.youtube.com/" target="_blank" rel="noreferrer">YouTube Studio (manual fallback)</a></div></section>
-</div><footer><p class="small">SSAG Media Automation Division. This static webpage stores non-sensitive working drafts in this browser. It does not upload video or post to YouTube by itself. No live metrics are invented.</p></footer></main>
+</div><footer><p class="small"><a href="https://github.com/cezarmorris2021/ssag-hub-site/tree/main/youtube-operations/renderer">SSAG CPU Shorts renderer</a> turns exported scene projects into actual MP4 videos on a compatible computer without cloud API or GPU. The generated voice is a synthetic draft.</p><p class="small">SSAG Media Automation Division. This static webpage stores non-sensitive working drafts in this browser. It does not upload video or post to YouTube by itself. No live metrics are invented.</p></footer></main>
 <script>
 "use strict";
 const $=id=>document.getElementById(id);
@@ -81,6 +81,25 @@ $('exportReport').onclick=()=>download(csv([['channel','title','format','target_
 $('exportBackup').onclick=()=>download(JSON.stringify({schema_version:1,exported_at:now(),...state},null,2),'ssag-youtube-backup.json','application/json');
 $('importBackup').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{if(f.size>2*1024*1024)throw Error('Backup too large');const d=JSON.parse(await f.text());if(d.schema_version!==1||!Array.isArray(d.jobs)||!Array.isArray(d.tickets)||d.jobs.length>3000||d.tickets.length>3000)throw Error('Wrong backup schema');if(!confirm('Replace this device\'s current YouTube working data?'))return;state={jobs:d.jobs,tickets:d.tickets};persist()}catch(err){alert('Could not import: '+err.message)}e.target.value=''};
 $('downloadScript').onclick=()=>{const m=meta();download('CHANNEL: '+m.channel+'\nVIDEO: '+m.title+'\nHOOK:\n'+m.hook+'\n\nSCRIPT:\n'+m.script+'\n\nSOURCES / LICENSING:\n'+m.source_notes+'\n','ssag-production-'+safeName(m.title)+'.txt','text/plain')};
+$('exportRenderProject').onclick=()=>{
+ try{
+  const draft=val('script');
+  if(!draft)throw Error('Write an original scene-by-scene script first. Separate scenes with blank lines.');
+  const paragraphs=draft.split(/\\n\\s*\\n/).map(p=>p.trim()).filter(Boolean);
+  if(paragraphs.length>12)throw Error('Maximum 12 scenes for the CPU Shorts renderer.');
+  const scenes=paragraphs.map(p=>{
+    const lines=p.split('\\n').map(x=>x.trim()).filter(Boolean);
+    const headline=lines[0]||'';
+    const body=lines.slice(1).join(' ');
+    if(!headline||headline.length>100||body.length>450)throw Error('Each scene must have a headline up to 100 characters and body up to 450.');
+    return {headline,body,seconds:6,narration:[headline,body].filter(Boolean).join('. ')};
+  });
+  const project={channel:val('channel')||'SSAG',title:val('titleInput')||scenes[0].headline,
+    accent:val('thumbAccent'),size:'720x1280',scenes};
+  download(JSON.stringify(project,null,2),'ssag-short-project-'+safeName(project.title)+'.json','application/json');
+  $('exportStatus').textContent='Real video project JSON exported locally; render it using SSAG CPU Shorts Renderer. No video has been rendered or uploaded in this browser.';
+ }catch(e){$('exportStatus').textContent=e.message}
+};
 $('downloadPack').onclick=()=>{try{const m=meta();if(!m.title||m.title.length>100||!m.description||m.description.length>5000)throw Error('Enter a title (up to 100 chars) and description (up to 5,000 chars).');if(!m.approved||!m.rights_confirmed)throw Error('Client approval and media rights are required to export a publishable manifest.');if(!m.channel_verified||!/^UC[\w-]{20,}$/.test(m.channel_id))throw Error('Verify the YouTube channel with OAuth and enter its real channel ID first.');if(m.publish_at&&new Date(m.publish_at)<=new Date())throw Error('Scheduled date must be in the future.');const pack={schema_version:1,title:m.title,description:m.description,tags:m.tags,channel_id:m.channel_id,category_id:m.category_id,publish_at:m.publish_at,made_for_kids:m.made_for_kids,contains_synthetic_media:m.contains_synthetic_media,approved:m.approved,rights_confirmed:m.rights_confirmed,channel_verified:m.channel_verified,format:m.format,prepared_at:now()};download(JSON.stringify(pack,null,2),'ssag-youtube-manifest-'+safeName(m.title)+'.json','application/json');$('exportStatus').textContent='Manifest generated locally. No upload occurred. The separate publisher requires OAuth and an actual video file.'}catch(e){$('exportStatus').textContent=e.message}};
 function rounded(ctx,x,y,w,h,r){ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.fill()}
 function thumbnail(){const c=$('thumb'),ctx=c.getContext('2d');const grad=ctx.createLinearGradient(0,0,1280,720);grad.addColorStop(0,'#071225');grad.addColorStop(1,'#15314a');ctx.fillStyle=grad;ctx.fillRect(0,0,1280,720);ctx.fillStyle=val('thumbAccent');ctx.fillRect(72,88,14,544);ctx.fillStyle='#9bcfe3';ctx.font='bold 34px system-ui';ctx.fillText((val('channel')||'SSAG').slice(0,34).toUpperCase(),115,128);const txt=val('thumbHeadline')||val('titleInput')||'YOUR VIDEO HEADLINE';const words=txt.split(/\s+/);const lines=[];let line='';ctx.font='900 83px system-ui';for(const w of words){if(ctx.measureText(line+' '+w).width>980&&line){lines.push(line);line=w}else line=(line?line+' ':'')+w}if(line)lines.push(line);ctx.fillStyle='#ffffff';lines.slice(0,4).forEach((l,i)=>ctx.fillText(l,113,280+i*105));ctx.fillStyle=val('thumbAccent');rounded(ctx,110,630,345,9,4)}
