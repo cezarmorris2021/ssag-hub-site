@@ -1,0 +1,38 @@
+name: SSAG YouTube operations safety tests
+on:
+  push:
+    paths:
+      - 'youtube-operations/**'
+      - '.github/workflows/youtube-operations-ci.yml'
+  pull_request:
+    paths:
+      - 'youtube-operations/**'
+      - '.github/workflows/youtube-operations-ci.yml'
+permissions:
+  contents: read
+jobs:
+  publisher-tests:
+    name: Publishing safety rules (no YouTube account access)
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile
+        run: python -m py_compile youtube-operations/publisher/publish.py youtube-operations/publisher/tests/test_publish.py
+      - name: Test manifest validation and safe publication controls
+        working-directory: youtube-operations/publisher
+        run: python -m unittest discover -s tests -v
+      - name: Parse web application JavaScript
+        run: |
+          node - <<'JS'
+          const fs=require('fs');
+          const html=fs.readFileSync('youtube-operations/index.html','utf8');
+          const matches=[...html.matchAll(/<script(?:\\s[^>]*)?>([\\s\\S]*?)<\\/script>/gi)];
+          if(matches.length!==1) throw new Error('Expected one inline app script');
+          new Function(matches[0][1]);
+          if(!html.includes('exportReport')||!html.includes('downloadPack'))throw new Error('Missing production controls');
+          console.log('YouTube UI JavaScript parsed successfully');
+          JS
