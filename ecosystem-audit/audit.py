@@ -48,7 +48,7 @@ def columns(conn, table):
         return {row[0] for row in cur.fetchall()}
 
 
-def count_check(conn, system, code, sql, required, severity="P0"):
+def count_check(conn, system, code, sql, required, severity="P0", alert_when_zero=False):
     for table, needed in required.items():
         if not table_exists(conn, table):
             flag(system, code + "_SCHEMA_MISSING", "P0", note=f"Missing table: {table}")
@@ -64,7 +64,7 @@ def count_check(conn, system, code, sql, required, severity="P0"):
             return
     try:
         count = scalar(conn, sql)
-        if count:
+        if (count == 0) if alert_when_zero else (count > 0):
             flag(system, code, severity, count)
     except psycopg.Error as exc:
         conn.rollback()
@@ -78,7 +78,8 @@ def check_sentinel(conn):
            where l.last_contact_at is null and exists (
              select 1 from public.call_attempts a
              where a.lead_id=l.id and a.organization_id=l.organization_id
-               and lower(a.outcome) in ('connected', 'appointment')
+               and lower(a.outcome) in ('connected', 'answered', 'conversation', 'appointment_booked', 'booked')
+               and a.started_at is not null
                and not exists (
                  select 1 from public.ai_call_sessions s
                  where s.id=a.ai_session_id
@@ -86,7 +87,7 @@ def check_sentinel(conn):
                )
            )""",
         {"leads": {"id", "organization_id", "last_contact_at"},
-         "call_attempts": {"lead_id", "organization_id", "outcome", "ai_session_id"},
+         "call_attempts": {"lead_id", "organization_id", "outcome", "ai_session_id", "started_at"},
          "ai_call_sessions": {"id", "transport"}},
     )
     count_check(
@@ -188,7 +189,7 @@ def check_clientflow(conn):
         count_check(
             conn, "clientflow", "NO_LEADS_RECORDED",
             "select count(*) from public.leads",
-            {"leads": {"id"}}, "P1",
+            {"leads": {"id"}}, "P1", alert_when_zero=True,
         )
     required_settings = {"paypal_me", "paypal_launch", "paypal_growth", "paypal_scale"}
     if not table_exists(conn, "settings"):
@@ -225,8 +226,29 @@ def check_generic(conn, system):
     count_check(
         conn, system, f"NO_{table.upper()}_RECORDED",
         f"select count(*) from public.{table}",
-        {table: {"id"}}, "P1",
+        {table: {"id"}}, "P1", alert_when_zero=True,
     )
+
+    payment_table = {"turnslate": "settings", "nextchapter": "store_settings"}[system]
+    payment_fields = {"turnslate": ("paypal_url", "contact_email"),
+                      "nextchapter": ("paypal_refresh", "paypal_complete",
+                                      "paypal_career", "contact_email")}[system]
+    if not table_exists(conn, payment_table):
+        flag(system, "PAYMENT_SETTINGS_TABLE_MISSING", "P0")
+    else:
+        missing = set(payment_fields) - columns(conn, payment_table)
+        if missing:
+            flag(system, "PAYMENT_SETTINGS_SCHEMA_INCOMPLETE", "P0",
+                 note=", ".join(sorted(missing)))
+        else:
+            for field in payment_fields:
+                count_check(
+                    conn, system, "MISSING_" + field.upper(), 
+                    f"select count(*) from public.{payment_table} "
+                    f"where nullif(trim({field}), '') is not null",
+                    {payment_table: {field}}, "P1", alert_when_zero=True,
+                )
+
 
 
 def check_proofs():
