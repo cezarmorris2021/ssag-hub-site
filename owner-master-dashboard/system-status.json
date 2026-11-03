@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-11-02T22:12:13.199Z",
+  "checkedAt": "2026-11-03T07:39:30.828Z",
   "total": 24,
-  "healthy": 21,
-  "unhealthy": 3,
+  "healthy": 23,
+  "unhealthy": 1,
   "confirmedPageProblems": 0,
   "backendTimeouts": 0,
-  "backendHttpErrors": 2,
+  "backendHttpErrors": 1,
   "systems": [
     {
       "name": "Master Owner Dashboard",
@@ -13,7 +13,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 126,
+      "ms": 184,
       "attempts": 1,
       "classification": "healthy",
       "pageTitle": "Cezar Master Build Dashboard"
@@ -24,7 +24,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 94,
+      "ms": 125,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -34,7 +34,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 90,
+      "ms": 119,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -44,7 +44,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 71,
+      "ms": 308,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -54,7 +54,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 174,
+      "ms": 202,
       "attempts": 1,
       "classification": "healthy",
       "pageTitle": "Cezar Master Build Launchpad"
@@ -65,7 +65,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 80,
+      "ms": 290,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -75,7 +75,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 117,
+      "ms": 259,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -85,7 +85,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 104,
+      "ms": 313,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -95,7 +95,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 97,
+      "ms": 156,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -105,7 +105,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 110,
+      "ms": 276,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -115,7 +115,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 138,
+      "ms": 335,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -125,7 +125,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 126,
+      "ms": 349,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -135,7 +135,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 65,
+      "ms": 292,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -145,7 +145,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 127,
+      "ms": 322,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -155,7 +155,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 142,
+      "ms": 484,
       "attempts": 1,
       "classification": "healthy",
       "pageTitle": "Savings Command Center"
@@ -166,7 +166,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 213,
+      "ms": 383,
       "attempts": 1,
       "classification": "healthy",
       "pageTitle": "Local Arbitrage Scanner"
@@ -177,7 +177,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 120,
+      "ms": 444,
       "attempts": 1,
       "classification": "healthy",
       "pageTitle": "Revenue Ready Make-Up Suite"
@@ -188,7 +188,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 115,
+      "ms": 294,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -196,21 +196,21 @@
       "name": "CallFlow Health",
       "url": "https://callflow-command.onrender.com/api/health",
       "kind": "backend",
-      "ok": false,
-      "status": 503,
-      "ms": 24746,
+      "ok": true,
+      "status": 200,
+      "ms": 25422,
       "attempts": 3,
-      "classification": "backend_http_error"
+      "classification": "healthy"
     },
     {
       "name": "Sentinel Zero AI Outbound Health",
       "url": "https://sentinel-zero-ai-outbound.onrender.com/health",
       "kind": "backend",
-      "ok": false,
-      "status": 503,
-      "ms": 24423,
+      "ok": true,
+      "status": 200,
+      "ms": 24602,
       "attempts": 3,
-      "classification": "backend_http_error"
+      "classification": "healthy"
     },
     {
       "name": "Two-Player Chess Health",
@@ -218,7 +218,7 @@
       "kind": "backend",
       "ok": true,
       "status": 200,
-      "ms": 24656,
+      "ms": 24649,
       "attempts": 3,
       "classification": "healthy"
     },
@@ -228,7 +228,7 @@
       "kind": "backend",
       "ok": true,
       "status": 200,
-      "ms": 24663,
+      "ms": 24871,
       "attempts": 3,
       "classification": "healthy"
     },
@@ -236,21 +236,21 @@
       "name": "SSAG Backend Health",
       "url": "https://ssag-backend.onrender.com/api/health",
       "kind": "backend",
-      "ok": true,
-      "status": 200,
-      "ms": 24615,
+      "ok": false,
+      "status": 503,
+      "ms": 24782,
       "attempts": 3,
-      "classification": "healthy"
+      "classification": "backend_http_error"
     },
     {
       "name": "GitHub Public Repository API",
       "url": "https://api.github.com/users/cezarmorris2021/repos?per_page=1&type=public",
       "kind": "inventory",
-      "ok": false,
-      "status": 403,
-      "ms": 55,
+      "ok": true,
+      "status": 200,
+      "ms": 483,
       "attempts": 1,
-      "classification": "http_error"
+      "classification": "healthy"
     }
   ]
 }
