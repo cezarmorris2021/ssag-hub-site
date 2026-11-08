@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-11-08T06:58:09.745Z",
+  "checkedAt": "2026-11-08T18:14:52.913Z",
   "total": 24,
-  "healthy": 23,
-  "unhealthy": 1,
+  "healthy": 24,
+  "unhealthy": 0,
   "confirmedPageProblems": 0,
   "backendTimeouts": 0,
-  "backendHttpErrors": 1,
+  "backendHttpErrors": 0,
   "systems": [
     {
       "name": "Master Owner Dashboard",
@@ -13,7 +13,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 173,
+      "ms": 190,
       "attempts": 1,
       "classification": "healthy",
       "pageTitle": "Cezar Master Build Dashboard"
@@ -24,7 +24,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 300,
+      "ms": 136,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -34,7 +34,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 133,
+      "ms": 142,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -44,7 +44,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 206,
+      "ms": 234,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -54,7 +54,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 187,
+      "ms": 146,
       "attempts": 1,
       "classification": "healthy",
       "pageTitle": "Cezar Master Build Launchpad"
@@ -65,7 +65,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 272,
+      "ms": 177,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -75,7 +75,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 352,
+      "ms": 303,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -85,7 +85,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 225,
+      "ms": 332,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -95,7 +95,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 212,
+      "ms": 192,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -105,7 +105,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 309,
+      "ms": 265,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -115,7 +115,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 296,
+      "ms": 340,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -125,7 +125,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 309,
+      "ms": 404,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -135,7 +135,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 373,
+      "ms": 352,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -145,7 +145,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 346,
+      "ms": 357,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -155,7 +155,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 429,
+      "ms": 373,
       "attempts": 1,
       "classification": "healthy",
       "pageTitle": "Savings Command Center"
@@ -166,7 +166,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 469,
+      "ms": 376,
       "attempts": 1,
       "classification": "healthy",
       "pageTitle": "Local Arbitrage Scanner"
@@ -177,7 +177,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 453,
+      "ms": 380,
       "attempts": 1,
       "classification": "healthy",
       "pageTitle": "Revenue Ready Make-Up Suite"
@@ -188,7 +188,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 414,
+      "ms": 311,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -198,7 +198,7 @@
       "kind": "backend",
       "ok": true,
       "status": 200,
-      "ms": 25317,
+      "ms": 25444,
       "attempts": 3,
       "classification": "healthy"
     },
@@ -206,11 +206,11 @@
       "name": "Sentinel Zero AI Outbound Health",
       "url": "https://sentinel-zero-ai-outbound.onrender.com/health",
       "kind": "backend",
-      "ok": false,
-      "status": 503,
-      "ms": 24741,
+      "ok": true,
+      "status": 200,
+      "ms": 24661,
       "attempts": 3,
-      "classification": "backend_http_error"
+      "classification": "healthy"
     },
     {
       "name": "Two-Player Chess Health",
@@ -218,7 +218,7 @@
       "kind": "backend",
       "ok": true,
       "status": 200,
-      "ms": 24962,
+      "ms": 24997,
       "attempts": 3,
       "classification": "healthy"
     },
@@ -228,8 +228,8 @@
       "kind": "backend",
       "ok": true,
       "status": 200,
-      "ms": 12766,
-      "attempts": 2,
+      "ms": 25076,
+      "attempts": 3,
       "classification": "healthy"
     },
     {
@@ -238,7 +238,7 @@
       "kind": "backend",
       "ok": true,
       "status": 200,
-      "ms": 25076,
+      "ms": 24964,
       "attempts": 3,
       "classification": "healthy"
     },
@@ -248,7 +248,7 @@
       "kind": "inventory",
       "ok": true,
       "status": 200,
-      "ms": 691,
+      "ms": 544,
       "attempts": 1,
       "classification": "healthy"
     }
