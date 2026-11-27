@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-11-27T09:29:45.375Z",
+  "checkedAt": "2026-11-27T21:50:18.291Z",
   "total": 24,
-  "healthy": 23,
-  "unhealthy": 1,
+  "healthy": 24,
+  "unhealthy": 0,
   "confirmedPageProblems": 0,
   "backendTimeouts": 0,
   "backendHttpErrors": 0,
@@ -13,7 +13,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 214,
+      "ms": 169,
       "attempts": 1,
       "classification": "healthy",
       "pageTitle": "Cezar Master Build Dashboard"
@@ -24,7 +24,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 157,
+      "ms": 158,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -34,7 +34,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 171,
+      "ms": 159,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -44,7 +44,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 251,
+      "ms": 229,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -54,7 +54,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 268,
+      "ms": 94,
       "attempts": 1,
       "classification": "healthy",
       "pageTitle": "Cezar Master Build Launchpad"
@@ -65,7 +65,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 285,
+      "ms": 134,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -75,7 +75,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 217,
+      "ms": 201,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -85,7 +85,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 201,
+      "ms": 198,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -95,7 +95,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 160,
+      "ms": 211,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -105,7 +105,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 249,
+      "ms": 214,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -115,7 +115,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 259,
+      "ms": 298,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -135,7 +135,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 262,
+      "ms": 260,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -145,7 +145,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 185,
+      "ms": 330,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -155,7 +155,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 416,
+      "ms": 299,
       "attempts": 1,
       "classification": "healthy",
       "pageTitle": "Savings Command Center"
@@ -166,7 +166,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 200,
+      "ms": 361,
       "attempts": 1,
       "classification": "healthy",
       "pageTitle": "Local Arbitrage Scanner"
@@ -177,7 +177,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 174,
+      "ms": 390,
       "attempts": 1,
       "classification": "healthy",
       "pageTitle": "Revenue Ready Make-Up Suite"
@@ -188,7 +188,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 168,
+      "ms": 470,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -198,7 +198,7 @@
       "kind": "backend",
       "ok": true,
       "status": 200,
-      "ms": 24784,
+      "ms": 25344,
       "attempts": 3,
       "classification": "healthy"
     },
@@ -208,7 +208,7 @@
       "kind": "backend",
       "ok": true,
       "status": 200,
-      "ms": 24565,
+      "ms": 24837,
       "attempts": 3,
       "classification": "healthy"
     },
@@ -218,7 +218,7 @@
       "kind": "backend",
       "ok": true,
       "status": 200,
-      "ms": 12254,
+      "ms": 12868,
       "attempts": 2,
       "classification": "healthy"
     },
@@ -228,7 +228,7 @@
       "kind": "backend",
       "ok": true,
       "status": 200,
-      "ms": 24285,
+      "ms": 24930,
       "attempts": 3,
       "classification": "healthy"
     },
@@ -238,7 +238,7 @@
       "kind": "backend",
       "ok": true,
       "status": 200,
-      "ms": 24273,
+      "ms": 25097,
       "attempts": 3,
       "classification": "healthy"
     },
@@ -246,11 +246,11 @@
       "name": "GitHub Public Repository API",
       "url": "https://api.github.com/users/cezarmorris2021/repos?per_page=1&type=public",
       "kind": "inventory",
-      "ok": false,
-      "status": 403,
-      "ms": 80,
+      "ok": true,
+      "status": 200,
+      "ms": 617,
       "attempts": 1,
-      "classification": "http_error"
+      "classification": "healthy"
     }
   ]
 }
