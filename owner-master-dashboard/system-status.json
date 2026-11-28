@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-27T21:50:18.291Z",
+  "checkedAt": "2026-11-28T08:43:04.571Z",
   "total": 24,
   "healthy": 24,
   "unhealthy": 0,
@@ -13,7 +13,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 169,
+      "ms": 142,
       "attempts": 1,
       "classification": "healthy",
       "pageTitle": "Cezar Master Build Dashboard"
@@ -24,7 +24,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 158,
+      "ms": 94,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -34,7 +34,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 159,
+      "ms": 91,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -44,7 +44,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 229,
+      "ms": 128,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -54,7 +54,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 94,
+      "ms": 124,
       "attempts": 1,
       "classification": "healthy",
       "pageTitle": "Cezar Master Build Launchpad"
@@ -65,7 +65,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 134,
+      "ms": 187,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -75,7 +75,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 201,
+      "ms": 138,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -85,7 +85,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 198,
+      "ms": 193,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -95,7 +95,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 211,
+      "ms": 151,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -105,7 +105,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 214,
+      "ms": 200,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -115,7 +115,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 298,
+      "ms": 291,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -125,7 +125,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 271,
+      "ms": 315,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -135,7 +135,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 260,
+      "ms": 236,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -145,7 +145,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 330,
+      "ms": 344,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -155,7 +155,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 299,
+      "ms": 362,
       "attempts": 1,
       "classification": "healthy",
       "pageTitle": "Savings Command Center"
@@ -166,7 +166,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 361,
+      "ms": 354,
       "attempts": 1,
       "classification": "healthy",
       "pageTitle": "Local Arbitrage Scanner"
@@ -177,7 +177,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 390,
+      "ms": 384,
       "attempts": 1,
       "classification": "healthy",
       "pageTitle": "Revenue Ready Make-Up Suite"
@@ -188,7 +188,7 @@
       "kind": "website",
       "ok": true,
       "status": 200,
-      "ms": 470,
+      "ms": 382,
       "attempts": 1,
       "classification": "healthy"
     },
@@ -198,7 +198,7 @@
       "kind": "backend",
       "ok": true,
       "status": 200,
-      "ms": 25344,
+      "ms": 25669,
       "attempts": 3,
       "classification": "healthy"
     },
@@ -208,7 +208,7 @@
       "kind": "backend",
       "ok": true,
       "status": 200,
-      "ms": 24837,
+      "ms": 24693,
       "attempts": 3,
       "classification": "healthy"
     },
@@ -218,8 +218,8 @@
       "kind": "backend",
       "ok": true,
       "status": 200,
-      "ms": 12868,
-      "attempts": 2,
+      "ms": 25023,
+      "attempts": 3,
       "classification": "healthy"
     },
     {
@@ -228,7 +228,7 @@
       "kind": "backend",
       "ok": true,
       "status": 200,
-      "ms": 24930,
+      "ms": 25118,
       "attempts": 3,
       "classification": "healthy"
     },
@@ -238,8 +238,8 @@
       "kind": "backend",
       "ok": true,
       "status": 200,
-      "ms": 25097,
-      "attempts": 3,
+      "ms": 12944,
+      "attempts": 2,
       "classification": "healthy"
     },
     {
@@ -248,7 +248,7 @@
       "kind": "inventory",
       "ok": true,
       "status": 200,
-      "ms": 617,
+      "ms": 612,
       "attempts": 1,
       "classification": "healthy"
     }
